@@ -1,8 +1,10 @@
 import { Card } from "@/components/ui/card";
+import Navbar from "@/components/Navbar";
 
 const Software = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
+      <Navbar />
       <div className="container py-8 md:py-16">
         {/* Header */}
         <div className="text-center mb-12">

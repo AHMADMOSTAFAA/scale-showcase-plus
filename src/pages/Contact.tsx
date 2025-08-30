@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, Users, Award } from "lucide-react";
+import Navbar from "@/components/Navbar";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
+      <Navbar />
       <div className="container py-8 md:py-16">
         {/* Header */}
         <div className="text-center mb-12">

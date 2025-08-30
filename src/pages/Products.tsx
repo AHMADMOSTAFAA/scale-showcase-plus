@@ -24,7 +24,11 @@ const Products = () => {
             <div key={category.id} className="space-y-6">
               <div className="text-center">
                 <div className="text-4xl mb-4">{category.icon}</div>
-                <h2 className="text-3xl font-bold mb-2">{category.name}</h2>
+                <h2 className="text-3xl font-bold mb-2">
+                  <Link to={`/products/category/${category.id}`} className="hover:text-primary transition-colors">
+                    {category.name}
+                  </Link>
+                </h2>
                 <p className="text-lg text-muted-foreground">{category.description}</p>
               </div>
 

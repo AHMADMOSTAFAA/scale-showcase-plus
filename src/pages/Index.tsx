@@ -36,11 +36,11 @@ const Index = () => {
             </p>
             
             <div className="flex gap-4">
-              <Button size="lg" className="px-8">
-                Learn More
+              <Button asChild size="lg" className="px-8">
+                <Link to="/products">Learn More</Link>
               </Button>
-              <Button variant="outline" size="lg" className="px-8">
-                Contact Us
+              <Button asChild variant="outline" size="lg" className="px-8">
+                <Link to="/contact">Contact Us</Link>
               </Button>
             </div>
           </div>
@@ -202,11 +202,11 @@ const Index = () => {
             Contact us today for professional weighing solutions and expert consultation.
           </p>
           <div className="flex justify-center gap-4">
-            <Button size="lg" variant="secondary">
-              View Products
+            <Button asChild size="lg" variant="secondary">
+              <Link to="/products">View Products</Link>
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Contact Us
+            <Button asChild size="lg" variant="outline" className="bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
         </div>
