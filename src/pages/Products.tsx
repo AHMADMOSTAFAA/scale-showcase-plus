@@ -1,6 +1,6 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { productCategories } from "@/data/products";
 import Navbar from "@/components/Navbar";
@@ -12,68 +12,38 @@ const Products = () => {
       
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Our Products</h1>
+          <h1 className="text-4xl font-bold mb-4">Product Categories</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive range of professional weighing solutions from leading manufacturers
-            including Cardinal, Mettler Toledo, Flintec, and Baykon.
+            Explore our full range of industrial weighing solutions. Select a category to view products and detailed specifications.
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {productCategories.map((category) => (
-            <div key={category.id} className="space-y-6">
-              <div className="text-center">
-                <div className="text-4xl mb-4">{category.icon}</div>
-                <h2 className="text-3xl font-bold mb-2">
-                  <Link to={`/products/category/${category.id}`} className="hover:text-primary transition-colors">
-                    {category.name}
+            <Card
+              key={category.id}
+              className="hover:shadow-lg transition-shadow border hover:border-primary/30"
+            >
+              <CardHeader className="text-center">
+                <div className="text-5xl mb-3">{category.icon}</div>
+                <CardTitle className="text-2xl">{category.name}</CardTitle>
+                <CardDescription className="text-base">
+                  {category.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm text-muted-foreground">
+                    {category.products.length} products
+                  </span>
+                </div>
+                <Button asChild className="w-full">
+                  <Link to={`/products/category/${category.id}`}>
+                    View {category.name}
                   </Link>
-                </h2>
-                <p className="text-lg text-muted-foreground">{category.description}</p>
-              </div>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.products.map((product) => (
-                  <Card key={product.id} className="hover:shadow-lg transition-shadow">
-                    <CardHeader>
-                      <div className="flex items-center justify-between mb-2">
-                        <Badge variant="secondary">{product.brand}</Badge>
-                        <span className="text-sm text-muted-foreground">{product.category}</span>
-                      </div>
-                      <CardTitle className="text-lg">{product.name}</CardTitle>
-                      <CardDescription>{product.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-4">
-                        <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                          <span className="text-muted-foreground">Product Image</span>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-semibold mb-2">Key Features:</h4>
-                          <ul className="text-sm text-muted-foreground space-y-1">
-                            {product.features.slice(0, 3).map((feature, index) => (
-                              <li key={index}>• {feature}</li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        <div className="flex gap-2">
-                          <Button asChild className="flex-1">
-                            <Link to={`/products/${product.id}`}>
-                              View Details
-                            </Link>
-                          </Button>
-                          <Button variant="outline">
-                            Contact Us
-                          </Button>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
+                </Button>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
