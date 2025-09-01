@@ -3,10 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import heroImage from "@/assets/hero-weighing.jpg";
-import weighingIcon from "@/assets/icon-weighing.jpg";
-import turnkeyIcon from "@/assets/icon-turnkey.jpg";
-import maintenanceIcon from "@/assets/icon-maintenance.jpg";
-import softwareIcon from "@/assets/icon-software.jpg";
 
 const Index = () => {
   return (
@@ -48,7 +44,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-stats-bg">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
@@ -78,7 +74,9 @@ const Index = () => {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <img src={weighingIcon} alt="Weighing Solutions" className="w-12 h-12 object-contain" />
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    ⚖️
+                  </div>
                 </div>
                 <CardTitle className="text-xl">Weighing Solutions</CardTitle>
               </CardHeader>
@@ -92,7 +90,9 @@ const Index = () => {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <img src={turnkeyIcon} alt="Turnkey Projects" className="w-12 h-12 object-contain" />
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    🏗️
+                  </div>
                 </div>
                 <CardTitle className="text-xl">Turnkey Projects</CardTitle>
               </CardHeader>
@@ -106,7 +106,9 @@ const Index = () => {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <img src={maintenanceIcon} alt="Maintenance" className="w-12 h-12 object-contain" />
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    🔧
+                  </div>
                 </div>
                 <CardTitle className="text-xl">Maintenance</CardTitle>
               </CardHeader>
@@ -120,7 +122,9 @@ const Index = () => {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <img src={softwareIcon} alt="Software Solutions" className="w-12 h-12 object-contain" />
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    💻
+                  </div>
                 </div>
                 <CardTitle className="text-xl">Software Solutions</CardTitle>
               </CardHeader>
@@ -163,33 +167,96 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-2xl text-primary">Flintec</CardTitle>
-                <CardDescription>Germany</CardDescription>
-              </CardHeader>
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+              <div className="h-16 mb-4 flex items-center justify-center">
+                <div className="w-32 h-12 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
+                  <span className="font-bold text-primary">Flintec</span>
+                </div>
+              </div>
+              <CardTitle className="text-xl text-primary mb-2">Flintec</CardTitle>
+              <CardDescription>Germany</CardDescription>
             </Card>
 
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-2xl text-primary">Mettler Toledo</CardTitle>
-                <CardDescription>Global</CardDescription>
-              </CardHeader>
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+              <div className="h-16 mb-4 flex items-center justify-center">
+                <div className="w-32 h-12 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
+                  <span className="font-bold text-primary">Mettler Toledo</span>
+                </div>
+              </div>
+              <CardTitle className="text-xl text-primary mb-2">Mettler Toledo</CardTitle>
+              <CardDescription>Global</CardDescription>
             </Card>
 
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-2xl text-primary">Baykon</CardTitle>
-                <CardDescription>Turkey</CardDescription>
-              </CardHeader>
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+              <div className="h-16 mb-4 flex items-center justify-center">
+                <div className="w-32 h-12 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
+                  <span className="font-bold text-primary">Baykon</span>
+                </div>
+              </div>
+              <CardTitle className="text-xl text-primary mb-2">Baykon</CardTitle>
+              <CardDescription>Turkey</CardDescription>
             </Card>
 
-            <Card className="text-center">
-              <CardHeader>
-                <CardTitle className="text-2xl text-primary">Cardinal</CardTitle>
-                <CardDescription>USA</CardDescription>
-              </CardHeader>
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+              <div className="h-16 mb-4 flex items-center justify-center">
+                <div className="w-32 h-12 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
+                  <span className="font-bold text-primary">Cardinal</span>
+                </div>
+              </div>
+              <CardTitle className="text-xl text-primary mb-2">Cardinal</CardTitle>
+              <CardDescription>USA</CardDescription>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Valued Clients Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Our Valued Clients</h2>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {[
+              "Unilever", "Carrefour", "Spinneys", "P&G", 
+              "Petrojet", "EgyptAir", "Egypt Post", "Eipico"
+            ].map((client) => (
+              <Card key={client} className="p-4 text-center hover:shadow-lg transition-shadow">
+                <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
+                  <span className="text-xs font-semibold text-primary">{client}</span>
+                </div>
+                <p className="text-xs text-muted-foreground">{client}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Stats Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl font-bold text-primary mb-2">2</div>
+              <div className="text-muted-foreground">Maintenance Branches</div>
+              <div className="text-sm text-muted-foreground mt-1">Cairo & Alexandria</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-primary mb-2">20+</div>
+              <div className="text-muted-foreground">Engineers & Technicians</div>
+              <div className="text-sm text-muted-foreground mt-1">Service Center</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-primary mb-2">Global</div>
+              <div className="text-muted-foreground">Training Programs</div>
+              <div className="text-sm text-muted-foreground mt-1">UK, Turkey, USA</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-primary mb-2">24/7</div>
+              <div className="text-muted-foreground">Support Available</div>
+              <div className="text-sm text-muted-foreground mt-1">Technical Assistance</div>
+            </div>
           </div>
         </div>
       </section>

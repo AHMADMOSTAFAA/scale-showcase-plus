@@ -5,11 +5,12 @@ export interface Product {
   brand: string;
   description: string;
   features: string[];
-  specifications: Record<string, string>;
+  specifications: { [key: string]: string };
   applications: string[];
   image: string;
   price?: string;
   hasDetails: boolean;
+  externalUrl?: string;
 }
 
 export interface ProductCategory {
@@ -22,685 +23,768 @@ export interface ProductCategory {
 
 export const productCategories: ProductCategory[] = [
   {
-    id: "indicators",
-    name: "Weight Indicators",
-    description: "Advanced digital weight indicators for precise measurements",
-    icon: "📊",
+    id: "truck-scales",
+    name: "Truck Scale Products",
+    description: "Heavy-duty truck scales and weighbridges for commercial vehicle weighing",
+    icon: "🚛",
     products: [
       {
-        id: "cardinal-805-spectrum",
-        name: "Cardinal 805 Spectrum",
-        category: "Weight Indicators",
+        id: "cardinal-swim",
+        name: "SWIM Slow-Speed In-Motion Vehicle Scale",
+        category: "Truck Scales",
         brand: "Cardinal",
-        description: "Cardinal's 825 Spectrum indicator's full-color 640 x 480 pixel (5.25-inch H x 4-inch W/ 133 mm H x 102 mm W) back-lit LCD touchscreen display and stainless steel enclosure commanding 64 MB of memory combined with massive connectivity via 4 bi-directional RS232 serial ports, 110/100 Base-T Ethernet port, 2 USB A host ports, and 1 USB B device port, there is no end to this indicator's potential. Up to 8 operators may be programmed for use. Other features include a time/date function, adjustable filtering, Gross, Tare, and Net conversion, QWERTY keypad and navigation keys. NTEP legal-for-trade and OIML certified. Supports up to 14 350-ohm load cells.",
+        description: "Cardinal Scale's SWIM slow-speed in-motion vehicle scale offers the ideal combination of accuracy, space, speed, and economical price point for weighing fully-loaded semi tractor trailers.",
         features: [
-          "64 MB User Memory",
-          "640 x 480 Pixel Full-Color LCD",
-          "Interactive Touchscreen Display",
-          "Internet File Management",
-          "IP66 Enclosure Rating",
-          "Navigation Keys",
-          "NTEP Legal for Trade",
-          "OIML Certified",
-          "Unlimited Truck Storage ID's"
+          "Ideal combination of accuracy and speed",
+          "Cost-effective means of measuring truck axle and gross weights",
+          "Occupies only a small fraction of the space needed for a full-length static truck scale",
+          "Perfect for ports, freight terminals, and commercial facilities",
+          "Uses four Cardinal SCA Series Stainless Steel Compression Load Cells",
+          "Single weighbridge contained in a solid lower frame"
         ],
         specifications: {
-          "Power Requirements": "90 to 264 VAC (50/60 Hz)",
-          "Enclosure Type": "Stainless Steel",
-          "Weight": "16.2 lb / 7.3 kg (includes gimbal)",
-          "Operating Temperature": "14 to 104 ˚F (-10 to +40 ˚C)",
-          "Display Size": "5.25 in W x 4.0 in H / 133 mm W x 102 mm H",
-          "Display Resolution": "640 x 480 pixel matrix color backlit LCD",
-          "Load Cell Support": "Up to 14 per SIB / 48 – 350 ohm load cells total"
+          "Type": "Slow-Speed In-Motion",
+          "Load Cells": "4 x Cardinal SCA Series Stainless Steel Compression",
+          "Platform": "Single weighbridge in solid lower frame",
+          "Application": "Semi tractor trailers, commercial vehicles"
         },
         applications: [
-          "Industrial weighing",
-          "Truck scales",
-          "Tank weighing",
-          "Process control"
+          "Ports and freight terminals",
+          "Commercial vehicle weighing",
+          "Traffic flow management",
+          "Axle and gross weight measurement"
         ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
+        image: "/placeholder-truck-scale.jpg",
+        hasDetails: true,
+        externalUrl: "https://cardinalscale.com/product/product-overview/Truck-Scales/SWIM-Slow-Speed-In-Motion-Scales"
       },
       {
-        id: "cardinal-225",
-        name: "Cardinal 225 Weight Indicator",
-        category: "Weight Indicators",
+        id: "cardinal-armor",
+        name: "ARMOR® Series Truck Scales",
+        category: "Truck Scales",
         brand: "Cardinal",
-        description: "The 225 Navigator weight indicator's transflective display technology allows the 240 x 64-pixel (5-inch/127 mm W x 1.33-inch/34 mm H) back-lit LCD with 1-inch high characters to be viewed under any lighting conditions from direct sunlight to total darkness. With an optional dual scale input board, up to 3 scales with total weights can be viewed simultaneously. Standard features include IP66 washdown stainless steel enclosure, 4 bi-directional RS232 serial ports, USB-B port, QWERTY keypad, 4 soft keys, 13 function keys, navigation keys, 16 Preset Weight Comparators (PWCs), 8 input control lines, 16 output control lines, piece count, batching, electronic tally roll, and 200 ID database for truck storage. NTEP legal-for-trade and OIML certified. Supports up to 14 350-ohm load cells.",
+        description: "ARMOR® series truck scales with steel deck construction and Digital SmartCells for superior durability and accuracy.",
         features: [
-          "200 ID's",
-          "240 x 64 Pixel LCD",
-          "4 Soft Keys",
-          "Alphanumeric Keypad",
-          "Electronic Tally Roll",
-          "IP66 Enclosure Rating",
-          "Navigation Keys",
-          "NTEP Legal for Trade",
-          "OIML Certified",
-          "Powers up to 14 Load Cells"
+          "Steel deck construction for maximum durability",
+          "Digital SmartCell technology",
+          "Superior accuracy and reliability",
+          "Weatherproof design",
+          "Advanced load cell technology",
+          "Easy installation and maintenance"
         ],
         specifications: {
-          "Power Requirements": "100 to 240 VAC (50/60 Hz) at 0.4A Max",
-          "Enclosure Type": "Stainless steel washdown",
-          "Display": "240 x 64 pixel LCD",
-          "Load Cell Support": "Up to 14 350-ohm load cells",
-          "Serial Ports": "4 bi-directional RS232"
+          "Type": "Static Truck Scale",
+          "Deck Material": "Steel",
+          "Technology": "Digital SmartCells",
+          "Design": "Weatherproof construction"
         },
         applications: [
-          "Industrial scales",
-          "Truck weighing",
-          "Batching systems",
-          "Inventory control"
+          "Commercial weighing facilities",
+          "Industrial applications",
+          "Heavy-duty vehicle weighing",
+          "Trade and commerce"
         ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
+        image: "/placeholder-armor-scale.jpg",
+        hasDetails: true,
+        externalUrl: "https://cardinalscale.com/product/product-overview/Truck-Scales/ARMOR-Steel-Deck-Truck-Scales-with-Digital-SmartCells"
+      },
+      {
+        id: "mettler-vts-202-203",
+        name: "VTS 202/203",
+        category: "Weighbridges",
+        brand: "Mettler Toledo",
+        description: "Mettler Toledo VTS 202/203 weighbridge systems for reliable and accurate truck weighing applications.",
+        features: [
+          "Rugged and reliable construction",
+          "Critical for weighing bulk goods",
+          "Industrial scale capability",
+          "High accuracy measurement",
+          "Durable design for heavy use",
+          "Professional weighbridge solution"
+        ],
+        specifications: {
+          "Type": "Weighbridge System",
+          "Model": "VTS 202/203",
+          "Application": "Truck and vehicle weighing",
+          "Capacity": "Heavy-duty commercial use"
+        },
+        applications: [
+          "Bulk goods weighing",
+          "Commercial truck weighing",
+          "Industrial facilities",
+          "Trade and logistics"
+        ],
+        image: "/placeholder-mettler-weighbridge.jpg",
+        hasDetails: true,
+        externalUrl: "https://www.mt.com/int/en/home/products/Transport_and_Logistics_Solutions/weighbridge-and-rail-scale-systems/road-bridge/VTS200.html"
+      }
+    ]
+  },
+  {
+    id: "industrial-scales",
+    name: "Industrial Scales Products",
+    description: "Industrial weighing equipment including indicators and load cells",
+    icon: "⚖️",
+    products: [
+      // Cardinal Indicators
+      {
+        id: "cardinal-805-spectrum",
+        name: "805 Spectrum",
+        category: "Indicators",
+        brand: "Cardinal",
+        description: "Advanced digital weighing indicator with comprehensive features for industrial applications.",
+        features: [
+          "Digital display technology",
+          "Advanced weighing algorithms",
+          "Industrial-grade construction",
+          "Multiple communication options",
+          "User-friendly interface",
+          "Reliable performance"
+        ],
+        specifications: {
+          "Type": "Digital Indicator",
+          "Display": "Advanced spectrum display",
+          "Applications": "Industrial weighing"
+        },
+        applications: [
+          "Industrial weighing systems",
+          "Process control",
+          "Manufacturing applications"
+        ],
+        image: "/placeholder-805-spectrum.jpg",
+        hasDetails: false
+      },
+      {
+        id: "cardinal-225-navigator",
+        name: "225",
+        category: "Indicators",
+        brand: "Cardinal",
+        description: "Cardinal 225 Navigator weighing indicator for reliable weight measurement and control.",
+        features: [
+          "Navigator technology",
+          "Precise weight measurement",
+          "Diagnostic capabilities",
+          "User-friendly operation",
+          "Durable construction",
+          "Industrial applications"
+        ],
+        specifications: {
+          "Type": "Weighing Indicator",
+          "Model": "225 Navigator",
+          "Features": "Diagnostic tools"
+        },
+        applications: [
+          "Scale diagnostic applications",
+          "Weight measurement",
+          "Industrial control systems"
+        ],
+        image: "/placeholder-225-navigator.jpg",
+        hasDetails: true,
+        externalUrl: "https://cardinalscale.com/product/product-overview/Scale-Diagnostic-Tools/225-Navigator"
       },
       {
         id: "cardinal-205",
-        name: "Cardinal 205 Weight Indicator",
-        category: "Weight Indicators",
+        name: "205",
+        category: "Indicators",
         brand: "Cardinal",
-        description: "The Cardinal model 205 is a reliable general-purpose weight indicator which may be connected to bench, floor, overhead track, tank/hopper, livestock or even truck scales. The stainless steel desk or wall-mountable enclosure ensures accurate, reliable operation in harsh environments and washdown applications. An easy-to-read 0.6-inch/15 mm high bright-red LED displays weight to six digits while push-button Gross, Tare, Net conversion, StableSENSE adjustable filtering, selectable key lockout, flexible print formats, selectable weight units, auto shutoff and sleep mode make the 205 easy to use. Four bi-directional RS232 serial ports, four input control lines, optional SnapStream wireless, USB-B standard, and USB-A optional features provide multiple connectivity options.",
+        description: "Cardinal 205 weighing indicator for standard industrial weighing applications.",
         features: [
-          "4 RS232 Serial Ports",
-          "Gross/Tare/Net Conversion",
-          "IP67 Enclosure Rating",
-          "NTEP Legal for Trade",
-          "OIML Certified",
-          "Powers up to 8 Load Cells",
-          "Stainless Steel Enclosure",
-          "USB-B Standard – USB-A Optional"
+          "Standard weighing functionality",
+          "Reliable performance",
+          "Easy operation",
+          "Industrial design",
+          "Cost-effective solution",
+          "Proven technology"
         ],
         specifications: {
-          "Power Requirements": "100 to 240 VAC (50/60 Hz) at 0.4A Max",
-          "Enclosure Type": "Stainless steel wall or desk-mount",
-          "Display": "0.6-inch/15 mm high bright-red LED",
-          "Load Cell Support": "Up to 8 load cells",
-          "Serial Ports": "4 bi-directional RS232"
+          "Type": "Weighing Indicator",
+          "Model": "205",
+          "Application": "Standard weighing"
         },
         applications: [
-          "Bench scales",
-          "Floor scales",
-          "Tank weighing",
-          "Livestock scales"
+          "General weighing applications",
+          "Industrial processes",
+          "Basic weight measurement"
         ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
+        image: "/placeholder-205-indicator.jpg",
+        hasDetails: false
       },
-      {
-        id: "baykon-bx66",
-        name: "Baykon BX66 Weighing Terminal",
-        category: "Weight Indicators",
-        brand: "Baykon",
-        description: "Baykon BX65 & BX66 Weighing Terminals are stainless steel, Windows CE Based Industrial Computers Designed for Transactional Weighing and Solutions. 7\" (BX65) and 10.1\" (BX66) color LCD touchscreen monitors provide intuitive and easy transactional operation. Standard models are IP30 protection. But, BX65 has IP67 protected sealed version. Available with standard application software; labelling & data collection, truck scale, milk collection scale, SQC – Statistical Quality Control.",
-        features: [
-          "Stainless steel 7\" & 10.1\" touchscreen weighing terminals",
-          "IP67 sealed version for 7\"",
-          "OIML 10000d, 3 x multi range and multi interval approved",
-          "Configurable menu, ticket",
-          "Multi language",
-          "Windows CE based operation",
-          "Color LCD touchscreen",
-          "Standard application software included"
-        ],
-        specifications: {
-          "Display": "7\" or 10.1\" color LCD touchscreen",
-          "Protection": "IP30 standard, IP67 for 7\" version",
-          "Operating System": "Windows CE",
-          "Approval": "OIML 10000d certified",
-          "Multi Range": "3 x multi range and multi interval"
-        },
-        applications: [
-          "Transactional weighing",
-          "Truck scales",
-          "Milk collection scales",
-          "Statistical quality control"
-        ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
-      },
-      {
-        id: "baykon-bx30",
-        name: "Baykon BX30 Fill",
-        category: "Weight Indicators",
-        brand: "Baykon",
-        description: "Baykon BX30 Fill, Filling and Packing Controller is high tech, smart and economic instrument for usage at various filling and packing machines. Its configurable specific recipe build feature and smart filling algorithms give big advantages in usage. The most common filling & packing applications fit one of its 12 filling modes. Master-slave operation provides the set up and recipe transferring to all BX30 Fill slave controllers on the machine.",
-        features: [
-          "12 different filling modes",
-          "Master-slave operation capability",
-          "Recipe memory (250 records)",
-          "ID memory (250 records)",
-          "7 programmable keys",
-          "Smart filling algorithms",
-          "Configurable recipe build feature",
-          "Programmable digital inputs/outputs"
-        ],
-        specifications: {
-          "Filling Modes": "12 different modes",
-          "Memory": "250 records for recipes and IDs",
-          "Programming Keys": "7 assignable keys",
-          "Operation": "Master-slave compatible"
-        },
-        applications: [
-          "Filling machines",
-          "Packing machines",
-          "Batch filling",
-          "Multi-scale bagging systems"
-        ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
-      },
-      {
-        id: "baykon-bx22",
-        name: "Baykon BX-22",
-        category: "Weight Indicators",
-        brand: "Baykon",
-        description: "Baykon BX22 is a High Quality General Purpose Weighing Indicator in Stainless Steel Housing. Its optional alibi memory provides usage with non-approved pc software for approved scales. BX22L, the increased lightning & surge voltage protected variant of BX22, has a very high protection against lightning on its load cell and power supply connections. With its 2 pcs galvanically isolated RS232C ports, BX22L has important advantage for industrial weighing applications, in particular for weighbridges.",
-        features: [
-          "Stainless steel housing",
-          "IP67 protection",
-          "Optional alibi memory",
-          "Lightning protection (BX22L variant)",
-          "2 galvanically isolated RS232C ports",
-          "Multi-color display",
-          "Rechargeable Li-ion battery",
-          "Dynamic filter for livestock weighing"
-        ],
-        specifications: {
-          "Housing": "Stainless steel",
-          "Protection": "IP67",
-          "Ports": "2 x RS232C (galvanically isolated)",
-          "Battery": "Rechargeable Li-ion",
-          "Display": "Multi-color LCD"
-        },
-        applications: [
-          "General weighing",
-          "Weighbridges",
-          "Industrial applications",
-          "Livestock weighing"
-        ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
-      }
-    ]
-  },
-  {
-    id: "load-cells",
-    name: "Load Cells",
-    description: "High-precision load cells for various weighing applications",
-    icon: "⚖️",
-    products: [
+      // Cardinal Load Cells
       {
         id: "cardinal-ac100k",
-        name: "Cardinal AC100K Load Cell",
+        name: "AC100K",
         category: "Load Cells",
         brand: "Cardinal",
-        description: "Cardinal Scale's AC series load cells and electronics provide everything you need for a vehicle scale, minus the weighbridge. These stainless steel compression load cells feature anti-rotation mounting with extra robust upper and lower cups and a self-centering column. The NTEP and OIML certified AC series analog load cells come in either 22,700 kg / 50,000 lb or 45,000 kg / 100,000 lb capacities. They feature a stainless steel, weatherproof junction box and 50 ft /15 m of cable per load cell.",
+        description: "Cardinal AC100K load cell for accurate weight measurement in industrial applications.",
         features: [
-          "22700 kg / 50000 lb and 45000 kg / 100000 lb Capacities",
-          "50 ft / 15 m of Load Cell Cable",
-          "Anti-Rotation Mounting",
-          "Everything Needed for a Vehicle Scale Minus the Weighbridge",
-          "Extra Robust Upper and Lower Cups",
-          "Interchangeable with Cardinal SCA Load Cells",
-          "IP69K Rated for High-Pressure and High-Temperature Washdown Applications",
-          "OIML and NTEP Certified",
-          "Stainless Steel Junction Box",
-          "Stainless Steel Load Cells"
+          "High accuracy measurement",
+          "Industrial-grade construction",
+          "Reliable performance",
+          "Durable design",
+          "Easy installation",
+          "Long service life"
         ],
         specifications: {
-          "Capacity (AC-50K)": "22,700 kg / 50,000 lb",
-          "Capacity (AC-100K)": "45,000 kg / 100,000 lb",
-          "Material": "Stainless steel",
-          "Cable Length": "50 ft / 15 m",
-          "Protection": "IP69K rated",
-          "Mounting": "Anti-rotation with self-centering column"
+          "Type": "Load Cell",
+          "Model": "AC100K",
+          "Application": "Industrial weighing"
         },
         applications: [
-          "Vehicle scales",
-          "Tank weighing",
-          "Hopper scales",
-          "Heavy-duty applications"
+          "Industrial scales",
+          "Process weighing",
+          "Manufacturing applications"
         ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
+        image: "/placeholder-ac100k.jpg",
+        hasDetails: false
       },
       {
         id: "cardinal-dc100k",
-        name: "Cardinal DC100K SmartCell",
+        name: "DC100K",
         category: "Load Cells",
         brand: "Cardinal",
-        description: "Cardinal Scale's DC series SmartCell® stainless steel compression digital load cells daisy-chain together for ease of wiring and the cables connect automatically to the load cell. Internal load cell circuitry eliminates the need for a junction box. The OIML-certified DC series come in either 22,700 kg / 50,000 lb or 45,000 kg / 100,000 lb capacities and they include iSite remote diagnostic monitoring software with automatic text/e-mail alerts.",
+        description: "Cardinal DC100K load cell for precision weighing in demanding industrial environments.",
         features: [
-          "22700 kg / 50000 lb and 45000 kg / 100000 lb Capacities",
-          "Anti-Rotation Mounting",
-          "Cables Connect Automatically to Load Cells",
-          "Daisy-Chain Cells Together for Ease of Wiring",
-          "Extra Robust Upper and Lower Cups",
-          "Includes iSite Remote Diagnostics Software with E-mail and Text Alerts",
-          "Interchangeable with Cardinal SCA Load Cells for Complete Digital Conversions",
-          "IP69K Rated for High-Pressure and High-Temperature Washdown Applications",
-          "No Junction Box Required",
-          "OIML Certified Digital Load Cells"
+          "Precision measurement technology",
+          "Demanding environment capability",
+          "High reliability",
+          "Industrial construction",
+          "Accurate weight sensing",
+          "Professional grade"
         ],
         specifications: {
-          "Capacity (DC-50K)": "22,700 kg / 50,000 lb",
-          "Capacity (DC-100K)": "45,000 kg / 100,000 lb",
-          "Type": "Digital compression load cell",
-          "Material": "Stainless steel",
-          "Protection": "IP69K rated",
-          "Connectivity": "Daisy-chain capable"
+          "Type": "Load Cell",
+          "Model": "DC100K",
+          "Environment": "Demanding industrial"
         },
         applications: [
-          "Digital vehicle scales",
-          "Tank weighing systems",
-          "Hopper scales",
-          "Process weighing"
+          "Precision weighing systems",
+          "Industrial automation",
+          "Heavy-duty applications"
         ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
+        image: "/placeholder-dc100k.jpg",
+        hasDetails: false
       },
+      // Baykon Indicators
       {
-        id: "baykon-br200s",
-        name: "Baykon BR200S Compression Load Cell",
-        category: "Load Cells",
+        id: "baykon-bx66",
+        name: "BX66 WEIGHING TERMINAL",
+        category: "Indicators",
         brand: "Baykon",
-        description: "Baykon BR200S is a low profile, high performance stainless steel Ring Torsion Type Load Cell with complete IP67 hermetic sealing. It has a wide capacity range from 5 t to 50 t perfectly fits for use in harsh industrial environments in food, chemical and allied process industries.",
+        description: "Advanced weighing terminal with comprehensive features for industrial weighing applications.",
         features: [
-          "Capacities: 5, 10, 15, 20, 30, 50 t",
-          "OIML R60 approved (Except 5t)",
-          "Low profile design",
-          "Stainless steel construction",
-          "IP67 hermetically sealed",
-          "Ring torsion type",
-          "High performance",
-          "Suitable for harsh environments"
+          "Advanced terminal technology",
+          "Comprehensive weighing features",
+          "Industrial application ready",
+          "User-friendly interface",
+          "Reliable operation",
+          "Professional design"
         ],
         specifications: {
-          "Capacity Range": "5t to 50t",
-          "Type": "Ring Torsion Compression",
-          "Material": "Stainless steel",
-          "Protection": "IP67 hermetic sealing",
-          "Approval": "OIML R60 (except 5t)",
-          "Profile": "Low profile design"
+          "Type": "Weighing Terminal",
+          "Model": "BX66",
+          "Features": "Advanced terminal functions"
         },
         applications: [
-          "Truck scales",
-          "Wagon scales",
-          "Silo weighing systems",
-          "Special weighing applications"
+          "Industrial weighing systems",
+          "Process control",
+          "Automation applications"
         ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
+        image: "/placeholder-bx66.jpg",
+        hasDetails: true,
+        externalUrl: "https://www.baykon.com/en/product/bx66-weighing-terminal/"
       },
       {
-        id: "baykon-bt604",
-        name: "Baykon BT604 Tension Load Cell",
-        category: "Load Cells",
+        id: "baykon-bx30-fill",
+        name: "BX30 Fill",
+        category: "Indicators",
         brand: "Baykon",
-        description: "Baykon BT604 is nickel plated alloy steel S Type Load Cell. It perfectly fits for use in industrial weighing applications such as crane scales, suspended hopper scales, convertion of mechanical scales and test machines.",
+        description: "Baykon BX30 Fill indicator designed for filling and batching applications.",
         features: [
-          "Capacities: 25 kg~5 t",
-          "Nickel Plated Alloy Steel Construction",
-          "Tension and Compression Applications",
-          "Protection Class: IP67",
-          "S-Type design",
-          "Versatile mounting options",
-          "High accuracy",
+          "Filling application optimized",
+          "Batching functionality",
+          "Precise control",
+          "Industrial design",
+          "Easy operation",
+          "Reliable performance"
+        ],
+        specifications: {
+          "Type": "Fill Indicator",
+          "Model": "BX30 Fill",
+          "Application": "Filling and batching"
+        },
+        applications: [
+          "Filling systems",
+          "Batching applications",
+          "Process control"
+        ],
+        image: "/placeholder-bx30-fill.jpg",
+        hasDetails: false
+      },
+      {
+        id: "baykon-bx22s",
+        name: "BX-22",
+        category: "Indicators",
+        brand: "Baykon",
+        description: "Baykon BX-22 weighing indicator for standard industrial weighing requirements.",
+        features: [
+          "Standard weighing functions",
+          "Industrial reliability",
+          "Cost-effective solution",
+          "User-friendly operation",
+          "Proven technology",
           "Durable construction"
         ],
         specifications: {
-          "Capacity Range": "25 kg to 5 t",
-          "Type": "S-Type tension/compression",
-          "Material": "Nickel plated alloy steel",
-          "Protection": "IP67",
-          "Applications": "Tension and compression",
-          "Design": "S-Type configuration"
-        },
-        applications: [
-          "Tank & bunker weighing systems",
-          "Force test machines",
-          "Crane scale applications",
-          "Suspended weighing systems"
-        ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
-      }
-    ]
-  },
-  {
-    id: "axle-scales",
-    name: "Axle Scales",
-    description: "Portable and fixed axle weighing systems for vehicle load verification",
-    icon: "⚖️",
-    products: [
-      {
-        id: "cardinal-axle-1000",
-        name: "Cardinal Axle Scale 1000",
-        category: "Axle Scales",
-        brand: "Cardinal",
-        description: "Portable axle scale for on-site vehicle weighing",
-        features: [
-          "Portable design",
-          "Quick setup",
-          "Battery powered",
-          "Wireless connectivity",
-          "Rugged construction"
-        ],
-        specifications: {
-          "Capacity": "20 tonnes per axle",
-          "Platform Size": "2m x 0.6m",
-          "Load Cells": "4 x Cardinal AC",
-          "Accuracy": "±0.5%",
-          "Power": "12V Battery"
-        },
-        applications: [
-          "Mobile weighing services",
-          "Field operations",
-          "Temporary checkpoints",
-          "Agricultural weighing"
-        ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
-      },
-      {
-        id: "mettler-powercell",
-        name: "Mettler Toledo PowerCell Axle Scale",
-        category: "Axle Scales",
-        brand: "Mettler Toledo",
-        description: "High-precision axle weighing system with advanced features",
-        features: [
-          "PowerCell technology",
-          "Self-diagnosing system",
-          "Predictive maintenance",
-          "High accuracy",
-          "Integrated software"
-        ],
-        specifications: {
-          "Capacity": "30 tonnes per axle",
-          "Platform Size": "2.5m x 0.8m",
-          "Load Cells": "PowerCell technology",
-          "Accuracy": "±0.1%",
-          "Power": "AC/DC compatible"
-        },
-        applications: [
-          "Precision weighing",
-          "Quality control",
-          "Legal trade applications",
-          "Process optimization"
-        ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
-      }
-    ]
-  },
-  {
-    id: "floor-scales",
-    name: "Floor Scales",
-    description: "Industrial floor scales for warehouse and manufacturing applications",
-    icon: "📦",
-    products: [
-      {
-        id: "flintec-sb14",
-        name: "Flintec SB14 Floor Scale",
-        category: "Floor Scales",
-        brand: "Flintec",
-        description: "German engineered floor scale for industrial weighing",
-        features: [
-          "German precision engineering",
-          "Stainless steel construction",
-          "Easy integration",
-          "Multiple size options",
-          "High durability"
-        ],
-        specifications: {
-          "Capacity": "5 tonnes",
-          "Platform Size": "1.5m x 1.5m",
-          "Load Cells": "4 x Flintec SB14",
-          "Accuracy": "±0.1%",
-          "Material": "Stainless steel"
-        },
-        applications: [
-          "Food industry",
-          "Pharmaceutical weighing",
-          "Chemical processing",
-          "Quality control"
-        ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
-      },
-      {
-        id: "baykon-bf3030",
-        name: "Baykon BF3030 Platform Scale",
-        category: "Floor Scales",
-        brand: "Baykon",
-        description: "Versatile platform scale for general industrial use",
-        features: [
-          "Modular platform design",
-          "Easy maintenance",
-          "Cost-effective",
-          "Portable options",
-          "Multiple indicator choices"
-        ],
-        specifications: {
-          "Capacity": "3 tonnes",
-          "Platform Size": "1.2m x 1.2m",
-          "Load Cells": "4 x Baykon BF",
-          "Accuracy": "±0.2%",
-          "Material": "Painted steel"
+          "Type": "Weighing Indicator",
+          "Model": "BX-22",
+          "Application": "Standard industrial weighing"
         },
         applications: [
           "General weighing",
-          "Warehouse operations",
-          "Manufacturing",
-          "Shipping/receiving"
+          "Industrial processes",
+          "Basic weight measurement"
         ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
+        image: "/placeholder-bx22.jpg",
+        hasDetails: false
+      },
+      // Baykon Load Cells
+      {
+        id: "baykon-br200s",
+        name: "BR200S COMPRESSION LOAD CELL",
+        category: "Load Cells",
+        brand: "Baykon",
+        description: "Baykon BR200S compression load cell for accurate weight measurement in compression applications.",
+        features: [
+          "Compression load sensing",
+          "High accuracy measurement",
+          "Robust construction",
+          "Industrial grade quality",
+          "Reliable performance",
+          "Easy installation"
+        ],
+        specifications: {
+          "Type": "Compression Load Cell",
+          "Model": "BR200S",
+          "Application": "Compression weighing"
+        },
+        applications: [
+          "Tank weighing",
+          "Hopper scales",
+          "Compression applications"
+        ],
+        image: "/placeholder-br200s.jpg",
+        hasDetails: false
+      },
+      {
+        id: "baykon-bt604",
+        name: "BT604 TENSION LOAD CELL",
+        category: "Load Cells",
+        brand: "Baykon",
+        description: "Baykon BT604 tension load cell for precise weight measurement in tension applications.",
+        features: [
+          "Tension load sensing",
+          "Precise measurement",
+          "High quality construction",
+          "Industrial reliability",
+          "Accurate performance",
+          "Professional grade"
+        ],
+        specifications: {
+          "Type": "Tension Load Cell",
+          "Model": "BT604",
+          "Application": "Tension weighing"
+        },
+        applications: [
+          "Hanging scales",
+          "Crane scales",
+          "Tension applications"
+        ],
+        image: "/placeholder-bt604.jpg",
+        hasDetails: false
+      },
+      // Flintec Indicators
+      {
+        id: "flintec-ft112",
+        name: "FT-112",
+        category: "Indicators",
+        brand: "Flintec",
+        description: "Flintec FT-112 weighing indicator for professional industrial weighing applications.",
+        features: [
+          "Professional weighing indicator",
+          "Industrial application ready",
+          "Advanced functionality",
+          "Reliable operation",
+          "User-friendly design",
+          "High performance"
+        ],
+        specifications: {
+          "Type": "Weighing Indicator",
+          "Model": "FT-112",
+          "Grade": "Professional industrial"
+        },
+        applications: [
+          "Industrial weighing",
+          "Process applications",
+          "Professional systems"
+        ],
+        image: "/placeholder-ft112.jpg",
+        hasDetails: false
+      },
+      {
+        id: "flintec-ft111-panel",
+        name: "FT-111 Panel",
+        category: "Indicators",
+        brand: "Flintec",
+        description: "Flintec FT-111 Panel indicator designed for panel mounting applications.",
+        features: [
+          "Panel mounting design",
+          "Compact form factor",
+          "Industrial functionality",
+          "Easy integration",
+          "Reliable performance",
+          "Professional appearance"
+        ],
+        specifications: {
+          "Type": "Panel Indicator",
+          "Model": "FT-111 Panel",
+          "Mounting": "Panel mount"
+        },
+        applications: [
+          "Panel integrated systems",
+          "Control panels",
+          "Embedded applications"
+        ],
+        image: "/placeholder-ft111-panel.jpg",
+        hasDetails: false
+      },
+      {
+        id: "flintec-ft113-fill",
+        name: "FT-113 Fill",
+        category: "Indicators",
+        brand: "Flintec",
+        description: "Flintec FT-113 Fill indicator specialized for filling and batching operations.",
+        features: [
+          "Filling operation specialized",
+          "Batching functionality",
+          "Precise control algorithms",
+          "Industrial construction",
+          "Efficient operation",
+          "Professional features"
+        ],
+        specifications: {
+          "Type": "Fill Indicator",
+          "Model": "FT-113 Fill",
+          "Specialization": "Filling and batching"
+        },
+        applications: [
+          "Filling systems",
+          "Batching operations",
+          "Process control"
+        ],
+        image: "/placeholder-ft113-fill.jpg",
+        hasDetails: false
+      },
+      // Flintec Load Cells
+      {
+        id: "flintec-rc3",
+        name: "RC3",
+        category: "Load Cells",
+        brand: "Flintec",
+        description: "Flintec RC3 compression load cell for reliable weight measurement applications.",
+        features: [
+          "Compression load cell technology",
+          "Reliable weight measurement",
+          "High quality construction",
+          "Industrial grade performance",
+          "Accurate sensing",
+          "Durable design"
+        ],
+        specifications: {
+          "Type": "Compression Load Cell",
+          "Model": "RC3",
+          "Technology": "Advanced compression sensing"
+        },
+        applications: [
+          "Tank weighing systems",
+          "Industrial scales",
+          "Process weighing"
+        ],
+        image: "/placeholder-rc3.jpg",
+        hasDetails: true,
+        externalUrl: "https://www.flintec.com/weight-sensors/load-cells/compression/rc3d-ng"
+      },
+      {
+        id: "flintec-ub6",
+        name: "UB6",
+        category: "Load Cells",
+        brand: "Flintec",
+        description: "Flintec UB6 load cell for various industrial weighing applications.",
+        features: [
+          "Versatile load cell design",
+          "Industrial weighing capability",
+          "High accuracy measurement",
+          "Robust construction",
+          "Reliable performance",
+          "Professional grade"
+        ],
+        specifications: {
+          "Type": "Load Cell",
+          "Model": "UB6",
+          "Application": "Various industrial weighing"
+        },
+        applications: [
+          "Industrial weighing systems",
+          "Multi-purpose applications",
+          "General weighing"
+        ],
+        image: "/placeholder-ub6.jpg",
+        hasDetails: false
+      },
+      {
+        id: "flintec-slb",
+        name: "SLB",
+        category: "Load Cells",
+        brand: "Flintec",
+        description: "Flintec SLB load cell for specialized industrial weighing requirements.",
+        features: [
+          "Specialized load cell design",
+          "Industrial requirements focused",
+          "High performance sensing",
+          "Quality construction",
+          "Accurate measurement",
+          "Professional application"
+        ],
+        specifications: {
+          "Type": "Load Cell",
+          "Model": "SLB",
+          "Focus": "Specialized industrial requirements"
+        },
+        applications: [
+          "Specialized weighing systems",
+          "Industrial applications",
+          "Professional weighing"
+        ],
+        image: "/placeholder-slb.jpg",
+        hasDetails: false
+      },
+      {
+        id: "flintec-sb14",
+        name: "SB14",
+        category: "Load Cells",
+        brand: "Flintec",
+        description: "Flintec SB14 load cell for standard industrial weighing applications.",
+        features: [
+          "Standard load cell design",
+          "Industrial application ready",
+          "Reliable sensing technology",
+          "Cost-effective solution",
+          "Proven performance",
+          "Quality construction"
+        ],
+        specifications: {
+          "Type": "Load Cell",
+          "Model": "SB14",
+          "Category": "Standard industrial"
+        },
+        applications: [
+          "Standard weighing systems",
+          "Industrial processes",
+          "General applications"
+        ],
+        image: "/placeholder-sb14.jpg",
+        hasDetails: false
+      },
+      // Utilcell Load Cells
+      {
+        id: "utilcell-740",
+        name: "740",
+        category: "Load Cells",
+        brand: "UTICELL",
+        description: "Utilcell 740 load cell for precision weighing in industrial environments.",
+        features: [
+          "Precision weighing capability",
+          "Industrial environment ready",
+          "High quality construction",
+          "Accurate measurement",
+          "Reliable performance",
+          "Professional grade"
+        ],
+        specifications: {
+          "Type": "Load Cell",
+          "Model": "740",
+          "Environment": "Industrial precision weighing"
+        },
+        applications: [
+          "Precision weighing systems",
+          "Industrial applications",
+          "High accuracy requirements"
+        ],
+        image: "/placeholder-utilcell-740.jpg",
+        hasDetails: true,
+        externalUrl: "https://www.utilcell.es/en/load-cell/model-740cp/"
+      },
+      {
+        id: "utilcell-460",
+        name: "460",
+        category: "Load Cells",
+        brand: "UTICELL",
+        description: "Utilcell 460 load cell for reliable industrial weighing applications.",
+        features: [
+          "Reliable industrial weighing",
+          "Quality load cell technology",
+          "Durable construction",
+          "Accurate sensing",
+          "Industrial grade performance",
+          "Professional reliability"
+        ],
+        specifications: {
+          "Type": "Load Cell",
+          "Model": "460",
+          "Application": "Reliable industrial weighing"
+        },
+        applications: [
+          "Industrial weighing systems",
+          "Reliable weight measurement",
+          "Commercial applications"
+        ],
+        image: "/placeholder-utilcell-460.jpg",
+        hasDetails: false
       }
     ]
   },
   {
-    id: "laboratory-balances",
-    name: "Laboratory Balances",
-    description: "Precision analytical and laboratory balances for accurate measurements",
+    id: "precision-products",
+    name: "Precision Products",
+    description: "High-precision analytical balances and laboratory equipment",
     icon: "🔬",
     products: [
       {
-        id: "mettler-xe204",
-        name: "Mettler Toledo XE204 Analytical Balance",
-        category: "Laboratory Balances",
-        brand: "Mettler Toledo",
-        description: "High-precision analytical balance for laboratory applications",
+        id: "radwag-as220-r1-plus",
+        name: "AS 220.R1 PLUS",
+        category: "Analytical Balances",
+        brand: "Radwag",
+        description: "AS 220.R1 PLUS Analytical Balance is a standard analytical weighing device of the SYNERGY LAB line with exceptional precision and modern features.",
         features: [
-          "0.1mg readability",
-          "Built-in calibration",
-          "TouchScreen operation",
-          "Multiple language support",
-          "Data management software"
+          "4-digit precision (0.0001g)",
+          "220g capacity",
+          "SYNERGY LAB line technology",
+          "Spacious weighing chamber",
+          "Open-door clearance for easy operation",
+          "Modern constructional solutions",
+          "Exceptional reliability and precision",
+          "Ergonomic mechanical design"
         ],
         specifications: {
           "Capacity": "220g",
-          "Readability": "0.1mg",
-          "Repeatability": "±0.1mg",
-          "Linearity": "±0.2mg",
-          "Calibration": "Internal FACT"
+          "Readability": "0.0001g",
+          "Type": "Analytical Balance",
+          "Series": "AS R1 PLUS",
+          "Line": "SYNERGY LAB"
         },
         applications: [
-          "Analytical chemistry",
-          "Research laboratories",
+          "Laboratory analysis",
+          "Analytical weighing",
+          "Precision measurement",
+          "Research applications",
           "Quality control",
-          "Educational institutions"
+          "Scientific analysis"
         ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
+        image: "/placeholder-as220-r1-plus.jpg",
+        hasDetails: true,
+        externalUrl: "https://radwag.com/en/as-220-r1-plus-analytical-balance,w1,LZY,101-101-125-101"
       },
       {
-        id: "mettler-ms204s",
-        name: "Mettler Toledo MS204S Semi-Micro Balance",
-        category: "Laboratory Balances",
-        brand: "Mettler Toledo",
-        description: "Semi-micro balance for ultra-precise measurements",
+        id: "radwag-as82-220-x2-plus",
+        name: "AS 82/220.X2 PLUS",
+        category: "Analytical Balances",
+        brand: "Radwag",
+        description: "Radwag AS 82/220.X2 PLUS analytical balance with advanced features for precision laboratory work.",
         features: [
-          "0.01mg readability",
-          "Anti-static kit included",
-          "Temperature monitoring",
-          "Vibration filtering",
-          "SmartSens technology"
+          "X2 PLUS technology",
+          "High precision measurement",
+          "Advanced analytical features",
+          "Laboratory grade construction",
+          "Professional design",
+          "Reliable performance"
         ],
         specifications: {
-          "Capacity": "220g",
-          "Readability": "0.01mg",
-          "Repeatability": "±0.015mg",
-          "Linearity": "±0.03mg",
-          "Calibration": "Internal/External"
+          "Type": "Analytical Balance",
+          "Model": "AS 82/220.X2 PLUS",
+          "Technology": "X2 PLUS",
+          "Application": "Laboratory precision"
         },
         applications: [
-          "Micro-analysis",
-          "Pharmaceutical research",
-          "High-precision measurements",
-          "Advanced laboratories"
-        ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
-      }
-    ]
-  },
-  {
-    id: "electronic-scales",
-    name: "Electronic Scales",
-    description: "Digital weighing solutions for various commercial applications",
-    icon: "⚡",
-    products: [
-      {
-        id: "cardinal-ec-600",
-        name: "Cardinal EC-600 Electronic Scale",
-        category: "Electronic Scales",
-        brand: "Cardinal",
-        description: "Versatile electronic scale for commercial use",
-        features: [
-          "Large LED display",
-          "Battery operation",
-          "Multiple weighing units",
-          "Checkweighing function",
-          "RS232 interface"
-        ],
-        specifications: {
-          "Capacity": "600kg",
-          "Readability": "0.1kg",
-          "Platform Size": "60cm x 80cm",
-          "Power": "AC/DC",
-          "Display": "LED"
-        },
-        applications: [
-          "Retail weighing",
-          "Shipping scales",
-          "Warehouse use",
-          "Production weighing"
-        ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
-      },
-      {
-        id: "flintec-pc60",
-        name: "Flintec PC60 Price Computing Scale",
-        category: "Electronic Scales",
-        brand: "Flintec",
-        description: "Price computing scale for retail applications",
-        features: [
-          "Price calculation",
-          "Memory storage",
-          "Thermal printer ready",
-          "Multiple currencies",
-          "Bright displays"
-        ],
-        specifications: {
-          "Capacity": "60kg",
-          "Readability": "10g/20g",
-          "Platform Size": "35cm x 45cm",
-          "Memory": "200 PLUs",
-          "Display": "Triple LED"
-        },
-        applications: [
-          "Retail markets",
-          "Grocery stores",
-          "Delis and butchers",
-          "Food service"
-        ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
-      }
-    ]
-  },
-  {
-    id: "crane-scales",
-    name: "Crane Scales",
-    description: "Heavy-duty hanging scales for lifting and weighing operations",
-    icon: "🏗️",
-    products: [
-      {
-        id: "cardinal-cs-10t",
-        name: "Cardinal CS-10T Crane Scale",
-        category: "Crane Scales",
-        brand: "Cardinal",
-        description: "Heavy-duty crane scale for lifting applications",
-        features: [
-          "Wireless remote control",
-          "360° rotating hook",
-          "Overload protection",
-          "Hold function",
-          "Peak hold feature"
-        ],
-        specifications: {
-          "Capacity": "10 tonnes",
-          "Readability": "5kg",
-          "Operating Temperature": "-10°C to +60°C",
-          "Safety Factor": "4:1",
-          "Battery Life": "100 hours"
-        },
-        applications: [
-          "Construction sites",
-          "Steel mills",
-          "Shipyards",
-          "Heavy manufacturing"
-        ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
-      },
-      {
-        id: "flintec-ch5000",
-        name: "Flintec CH5000 Crane Hook Scale",
-        category: "Crane Scales",
-        brand: "Flintec",
-        description: "Professional crane hook scale with advanced features",
-        features: [
-          "Aluminum construction",
-          "LED display",
-          "Remote control included",
-          "Multiple hanging points",
-          "Automatic shut-off"
-        ],
-        specifications: {
-          "Capacity": "5 tonnes",
-          "Readability": "2kg",
-          "Display": "1-inch LED",
-          "Operating Range": "100m",
-          "Charging": "AC adapter"
-        },
-        applications: [
-          "Material handling",
-          "Warehouse operations",
-          "Manufacturing",
+          "Advanced laboratory analysis",
+          "Precision weighing",
+          "Research applications",
           "Quality control"
         ],
-        image: "/api/placeholder/600/400",
-        hasDetails: true
+        image: "/placeholder-as82-220-x2-plus.jpg",
+        hasDetails: false
+      },
+      {
+        id: "radwag-ps1000-ri",
+        name: "PS 1000 RI",
+        category: "Precision Scales",
+        brand: "Radwag",
+        description: "Radwag PS 1000 RI precision scale for accurate weighing in laboratory and industrial applications.",
+        features: [
+          "1000g capacity",
+          "RI technology",
+          "Precision weighing capability",
+          "Laboratory and industrial use",
+          "Accurate measurement",
+          "Professional construction"
+        ],
+        specifications: {
+          "Capacity": "1000g",
+          "Type": "Precision Scale",
+          "Model": "PS 1000 RI",
+          "Technology": "RI"
+        },
+        applications: [
+          "Laboratory weighing",
+          "Industrial precision applications",
+          "Quality control",
+          "Research work"
+        ],
+        image: "/placeholder-ps1000-ri.jpg",
+        hasDetails: false
+      },
+      {
+        id: "radwag-ps3000-x2",
+        name: "PS 3000 X2",
+        category: "Precision Scales",
+        brand: "Radwag",
+        description: "Radwag PS 3000 X2 precision scale with high capacity for demanding weighing applications.",
+        features: [
+          "3000g high capacity",
+          "X2 technology",
+          "Demanding application ready",
+          "High precision measurement",
+          "Professional grade",
+          "Reliable performance"
+        ],
+        specifications: {
+          "Capacity": "3000g",
+          "Type": "Precision Scale",
+          "Model": "PS 3000 X2",
+          "Technology": "X2"
+        },
+        applications: [
+          "High capacity precision weighing",
+          "Laboratory applications",
+          "Industrial quality control",
+          "Research and development"
+        ],
+        image: "/placeholder-ps3000-x2.jpg",
+        hasDetails: false
       }
     ]
   }
 ];
 
+// Utility functions
 export const getAllProducts = (): Product[] => {
   return productCategories.flatMap(category => category.products);
 };
