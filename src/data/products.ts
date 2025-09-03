@@ -1,3 +1,37 @@
+import truckImg from "@/assets/truck.jpeg";
+import industrialImg from "@/assets/industrial.png";
+import precisionImg from "@/assets/precision.jpg";
+import swim from "@/assets/swim.webp"
+import Armor from "@/assets/Armor.webp"
+import Mettler from "@/assets/toledo.png"
+import mettlerweighbridge from "@/assets/mettlerweighbridge.webp"
+import cardinal805 from "@/assets/cardinal 805.webp"
+import cardinal225 from "@/assets/cardinal225.webp"
+import cardinal205 from "@/assets/cardinal205.webp"
+import ac100k from "@/assets/ac100k.webp"
+import dc100k from "@/assets/dc100k.webp"
+import bx66 from "@/assets/bx66.webp"
+import bx30 from "@/assets/bx30.webp"
+import bx22 from "@/assets/bx22.webp"
+import br200 from "@/assets/br200s.webp"
+import bt604 from "@/assets/bt604.webp"
+import ft112 from "@/assets/ft-112.webp"
+import ft111 from "@/assets/ft-111.webp"
+import ft113 from "@/assets/ft-113.webp"
+import RC3 from "@/assets/rc3.webp"
+import ub6 from "@/assets/ub6.webp"
+import slb from "@/assets/slb.webp"
+import SB14 from "@/assets/sb14.webp"
+import utc740 from "@/assets/uticell1.webp"
+import uticell460 from "@/assets/uticell460.webp"
+import as220 from "@/assets/as220.webp"
+import as82 from "@/assets/as82.webp"
+import ps1000 from "@/assets/radwag.webp"
+import ps3000 from "@/assets/radwagps3000.webp"
+
+
+
+
 export interface Product {
   id: string;
   name: string;
@@ -17,7 +51,7 @@ export interface ProductCategory {
   id: string;
   name: string;
   description: string;
-  icon: string;
+  img: string;
   products: Product[];
 }
 
@@ -26,7 +60,7 @@ export const productCategories: ProductCategory[] = [
     id: "truck-scales",
     name: "Truck Scale Products",
     description: "Heavy-duty truck scales and weighbridges for commercial vehicle weighing",
-    icon: "🚛",
+    img: truckImg,
     products: [
       {
         id: "cardinal-swim",
@@ -54,7 +88,7 @@ export const productCategories: ProductCategory[] = [
           "Traffic flow management",
           "Axle and gross weight measurement"
         ],
-        image: "/placeholder-truck-scale.jpg",
+        image:swim,
         hasDetails: true,
         externalUrl: "https://cardinalscale.com/product/product-overview/Truck-Scales/SWIM-Slow-Speed-In-Motion-Scales"
       },
@@ -84,7 +118,7 @@ export const productCategories: ProductCategory[] = [
           "Heavy-duty vehicle weighing",
           "Trade and commerce"
         ],
-        image: "/placeholder-armor-scale.jpg",
+        image: Armor,
         hasDetails: true,
         externalUrl: "https://cardinalscale.com/product/product-overview/Truck-Scales/ARMOR-Steel-Deck-Truck-Scales-with-Digital-SmartCells"
       },
@@ -114,7 +148,7 @@ export const productCategories: ProductCategory[] = [
           "Industrial facilities",
           "Trade and logistics"
         ],
-        image: "/placeholder-mettler-weighbridge.jpg",
+        image: mettlerweighbridge,
         hasDetails: true,
         externalUrl: "https://www.mt.com/int/en/home/products/Transport_and_Logistics_Solutions/weighbridge-and-rail-scale-systems/road-bridge/VTS200.html"
       }
@@ -124,7 +158,7 @@ export const productCategories: ProductCategory[] = [
     id: "industrial-scales",
     name: "Industrial Scales Products",
     description: "Industrial weighing equipment including indicators and load cells",
-    icon: "⚖️",
+    img: industrialImg,
     products: [
       // Cardinal Indicators
       {
@@ -151,7 +185,7 @@ export const productCategories: ProductCategory[] = [
           "Process control",
           "Manufacturing applications"
         ],
-        image: "/placeholder-805-spectrum.jpg",
+        image: cardinal805,
         hasDetails: false
       },
       {
@@ -178,7 +212,7 @@ export const productCategories: ProductCategory[] = [
           "Weight measurement",
           "Industrial control systems"
         ],
-        image: "/placeholder-225-navigator.jpg",
+        image: cardinal225,
         hasDetails: true,
         externalUrl: "https://cardinalscale.com/product/product-overview/Scale-Diagnostic-Tools/225-Navigator"
       },
@@ -206,7 +240,7 @@ export const productCategories: ProductCategory[] = [
           "Industrial processes",
           "Basic weight measurement"
         ],
-        image: "/placeholder-205-indicator.jpg",
+        image: cardinal205,
         hasDetails: false
       },
       // Cardinal Load Cells
@@ -234,7 +268,7 @@ export const productCategories: ProductCategory[] = [
           "Process weighing",
           "Manufacturing applications"
         ],
-        image: "/placeholder-ac100k.jpg",
+        image: ac100k,
         hasDetails: false
       },
       {
@@ -261,7 +295,7 @@ export const productCategories: ProductCategory[] = [
           "Industrial automation",
           "Heavy-duty applications"
         ],
-        image: "/placeholder-dc100k.jpg",
+        image: dc100k,
         hasDetails: false
       },
       // Baykon Indicators
@@ -289,7 +323,7 @@ export const productCategories: ProductCategory[] = [
           "Process control",
           "Automation applications"
         ],
-        image: "/placeholder-bx66.jpg",
+        image:bx66,
         hasDetails: true,
         externalUrl: "https://www.baykon.com/en/product/bx66-weighing-terminal/"
       },
@@ -317,7 +351,7 @@ export const productCategories: ProductCategory[] = [
           "Batching applications",
           "Process control"
         ],
-        image: "/placeholder-bx30-fill.jpg",
+        image: bx30,
         hasDetails: false
       },
       {
@@ -344,7 +378,7 @@ export const productCategories: ProductCategory[] = [
           "Industrial processes",
           "Basic weight measurement"
         ],
-        image: "/placeholder-bx22.jpg",
+        image: bx22,
         hasDetails: false
       },
       // Baykon Load Cells
@@ -372,7 +406,7 @@ export const productCategories: ProductCategory[] = [
           "Hopper scales",
           "Compression applications"
         ],
-        image: "/placeholder-br200s.jpg",
+        image: br200,
         hasDetails: false
       },
       {
@@ -399,7 +433,7 @@ export const productCategories: ProductCategory[] = [
           "Crane scales",
           "Tension applications"
         ],
-        image: "/placeholder-bt604.jpg",
+        image: bt604,
         hasDetails: false
       },
       // Flintec Indicators
@@ -427,7 +461,7 @@ export const productCategories: ProductCategory[] = [
           "Process applications",
           "Professional systems"
         ],
-        image: "/placeholder-ft112.jpg",
+        image: ft112,
         hasDetails: false
       },
       {
@@ -454,7 +488,7 @@ export const productCategories: ProductCategory[] = [
           "Control panels",
           "Embedded applications"
         ],
-        image: "/placeholder-ft111-panel.jpg",
+        image: ft111,
         hasDetails: false
       },
       {
@@ -481,7 +515,7 @@ export const productCategories: ProductCategory[] = [
           "Batching operations",
           "Process control"
         ],
-        image: "/placeholder-ft113-fill.jpg",
+        image: ft113,
         hasDetails: false
       },
       // Flintec Load Cells
@@ -509,7 +543,7 @@ export const productCategories: ProductCategory[] = [
           "Industrial scales",
           "Process weighing"
         ],
-        image: "/placeholder-rc3.jpg",
+        image: RC3,
         hasDetails: true,
         externalUrl: "https://www.flintec.com/weight-sensors/load-cells/compression/rc3d-ng"
       },
@@ -537,7 +571,7 @@ export const productCategories: ProductCategory[] = [
           "Multi-purpose applications",
           "General weighing"
         ],
-        image: "/placeholder-ub6.jpg",
+        image: ub6,
         hasDetails: false
       },
       {
@@ -564,7 +598,7 @@ export const productCategories: ProductCategory[] = [
           "Industrial applications",
           "Professional weighing"
         ],
-        image: "/placeholder-slb.jpg",
+        image: slb,
         hasDetails: false
       },
       {
@@ -591,7 +625,7 @@ export const productCategories: ProductCategory[] = [
           "Industrial processes",
           "General applications"
         ],
-        image: "/placeholder-sb14.jpg",
+        image: SB14,
         hasDetails: false
       },
       // Utilcell Load Cells
@@ -619,7 +653,7 @@ export const productCategories: ProductCategory[] = [
           "Industrial applications",
           "High accuracy requirements"
         ],
-        image: "/placeholder-utilcell-740.jpg",
+        image: utc740,
         hasDetails: true,
         externalUrl: "https://www.utilcell.es/en/load-cell/model-740cp/"
       },
@@ -647,7 +681,7 @@ export const productCategories: ProductCategory[] = [
           "Reliable weight measurement",
           "Commercial applications"
         ],
-        image: "/placeholder-utilcell-460.jpg",
+        image: uticell460,
         hasDetails: false
       }
     ]
@@ -656,7 +690,7 @@ export const productCategories: ProductCategory[] = [
     id: "precision-products",
     name: "Precision Products",
     description: "High-precision analytical balances and laboratory equipment",
-    icon: "🔬",
+    img: precisionImg,
     products: [
       {
         id: "radwag-as220-r1-plus",
@@ -689,7 +723,7 @@ export const productCategories: ProductCategory[] = [
           "Quality control",
           "Scientific analysis"
         ],
-        image: "/placeholder-as220-r1-plus.jpg",
+        image: as220,
         hasDetails: true,
         externalUrl: "https://radwag.com/en/as-220-r1-plus-analytical-balance,w1,LZY,101-101-125-101"
       },
@@ -719,7 +753,7 @@ export const productCategories: ProductCategory[] = [
           "Research applications",
           "Quality control"
         ],
-        image: "/placeholder-as82-220-x2-plus.jpg",
+        image: as82,
         hasDetails: false
       },
       {
@@ -748,7 +782,7 @@ export const productCategories: ProductCategory[] = [
           "Quality control",
           "Research work"
         ],
-        image: "/placeholder-ps1000-ri.jpg",
+        image: ps1000,
         hasDetails: false
       },
       {
@@ -777,7 +811,7 @@ export const productCategories: ProductCategory[] = [
           "Industrial quality control",
           "Research and development"
         ],
-        image: "/placeholder-ps3000-x2.jpg",
+        image: ps3000,
         hasDetails: false
       }
     ]

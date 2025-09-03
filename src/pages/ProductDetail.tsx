@@ -50,16 +50,10 @@ const ProductDetail = () => {
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           <div className="space-y-6">
             <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-              <span className="text-muted-foreground text-lg">Product Image</span>
+             <img src={product.image} alt="" />
             </div>
             
-            <div className="grid grid-cols-2 gap-4">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="aspect-square bg-muted rounded-lg flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">View {i}</span>
-                </div>
-              ))}
-            </div>
+            
           </div>
 
           <div className="space-y-6">

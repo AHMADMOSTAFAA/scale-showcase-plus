@@ -1,11 +1,10 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { productCategories } from "@/data/products";
 import Navbar from "@/components/Navbar";
 
-const Products = () => {
+const Products = () => {  
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -22,16 +21,24 @@ const Products = () => {
           {productCategories.map((category) => (
             <Card
               key={category.id}
-              className="hover:shadow-lg transition-shadow border hover:border-primary/30"
+              className="flex flex-col h-full hover:shadow-lg transition-shadow border hover:border-primary/30"
             >
               <CardHeader className="text-center">
-                <div className="text-5xl mb-3">{category.icon}</div>
+                <div className="mb-3">
+                  <img 
+                    src={category.img} 
+                    alt={category.name} 
+                    className="mx-auto h-32 object-contain"
+                  />
+                </div>
                 <CardTitle className="text-2xl">{category.name}</CardTitle>
                 <CardDescription className="text-base">
                   {category.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+
+              {/* Footer pushed to bottom */}
+              <CardContent className="mt-auto">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm text-muted-foreground">
                     {category.products.length} products

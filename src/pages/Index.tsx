@@ -3,9 +3,28 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import heroImage from "@/assets/hero-weighing.jpg";
+import unilever from "@/assets/unilever.png";
+import carrefour from "@/assets/carrefour.png";
+import spinneys from "@/assets/spinneys.png";
+import pandg from "@/assets/pandg.jpg";
+import petrojet from "@/assets/petrojet.png";
+import egair from "@/assets/egair.jpg";
+import egpost from "@/assets/egpost.jpg";
+import eipico from "@/assets/eipico.jpg";
+const clients = [
+  { name: "Unilever", logo: unilever },
+  { name: "Carrefour", logo: carrefour },
+  { name: "Spinneys", logo: spinneys },
+  { name: "P&G", logo: pandg },
+  { name: "Petrojet", logo: petrojet },
+  { name: "Egypt Air", logo: egair },
+  { name: "Egypt Post", logo: egpost },
+  { name: "Eipico", logo: eipico },
+];
 
 const Index = () => {
   return (
+    
     <div className="min-h-screen bg-background">
       <Navbar />
       
@@ -75,7 +94,7 @@ const Index = () => {
               <CardHeader>
                 <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                    ⚖️
+                    <img src="src/assets/icon-weigh.jpg" alt="" />
                   </div>
                 </div>
                 <CardTitle className="text-xl">Weighing Solutions</CardTitle>
@@ -91,7 +110,7 @@ const Index = () => {
               <CardHeader>
                 <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                    🏗️
+                    <img src="src/assets/icon-turnkey.jpg" alt="" />
                   </div>
                 </div>
                 <CardTitle className="text-xl">Turnkey Projects</CardTitle>
@@ -107,7 +126,7 @@ const Index = () => {
               <CardHeader>
                 <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                    🔧
+                    <img src="src/assets/icon-maintenance.jpg" alt="" />
                   </div>
                 </div>
                 <CardTitle className="text-xl">Maintenance</CardTitle>
@@ -123,7 +142,7 @@ const Index = () => {
               <CardHeader>
                 <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
                   <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                    💻
+                    <img src="src/assets/icon-software.jpg" alt="" />
                   </div>
                 </div>
                 <CardTitle className="text-xl">Software Solutions</CardTitle>
@@ -170,7 +189,7 @@ const Index = () => {
             <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <div className="h-16 mb-4 flex items-center justify-center">
                 <div className="w-32 h-12 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
-                  <span className="font-bold text-primary">Flintec</span>
+                  <img src="src/assets/lintec-logo.jpg" alt="" />
                 </div>
               </div>
               <CardTitle className="text-xl text-primary mb-2">Flintec</CardTitle>
@@ -180,7 +199,7 @@ const Index = () => {
             <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <div className="h-16 mb-4 flex items-center justify-center">
                 <div className="w-32 h-12 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
-                  <span className="font-bold text-primary">Mettler Toledo</span>
+                   <img src="src/assets/toledo.png" alt="" />
                 </div>
               </div>
               <CardTitle className="text-xl text-primary mb-2">Mettler Toledo</CardTitle>
@@ -190,7 +209,7 @@ const Index = () => {
             <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <div className="h-16 mb-4 flex items-center justify-center">
                 <div className="w-32 h-12 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
-                  <span className="font-bold text-primary">Baykon</span>
+                 <img src="src/assets/baykon.png" alt="" />
                 </div>
               </div>
               <CardTitle className="text-xl text-primary mb-2">Baykon</CardTitle>
@@ -200,7 +219,7 @@ const Index = () => {
             <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <div className="h-16 mb-4 flex items-center justify-center">
                 <div className="w-32 h-12 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
-                  <span className="font-bold text-primary">Cardinal</span>
+                   <img src="src/assets/cardinal.png" alt="" />
                 </div>
               </div>
               <CardTitle className="text-xl text-primary mb-2">Cardinal</CardTitle>
@@ -217,19 +236,24 @@ const Index = () => {
             <h2 className="text-4xl font-bold mb-4">Our Valued Clients</h2>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-            {[
-              "Unilever", "Carrefour", "Spinneys", "P&G", 
-              "Petrojet", "EgyptAir", "Egypt Post", "Eipico"
-            ].map((client) => (
-              <Card key={client} className="p-4 text-center hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
-                  <span className="text-xs font-semibold text-primary">{client}</span>
-                </div>
-                <p className="text-xs text-muted-foreground">{client}</p>
-              </Card>
-            ))}
-          </div>
+         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+  {clients.map((client) => (
+    <Card
+      key={client.name}
+      className="p-4 text-center hover:shadow-lg transition-shadow"
+    >
+      <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
+        <img
+          src={client.logo}
+          alt={client.name}
+          className="max-h-full max-w-full object-contain"
+        />
+      </div>
+      <p className="text-xs text-muted-foreground">{client.name}</p>
+    </Card>
+  ))}
+</div>
+
         </div>
       </section>
 
