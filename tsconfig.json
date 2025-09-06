@@ -9,6 +9,10 @@
     "paths": {
       "@/*": ["./src/*"]
     },
+      "typeRoots": [
+      "./src/types",      // 👈 add this
+      "./node_modules/@types"
+    ],
     "noImplicitAny": false,
     "noUnusedParameters": false,
     "skipLibCheck": true,

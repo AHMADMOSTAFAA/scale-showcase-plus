@@ -11,14 +11,23 @@ import Software from "./pages/Software";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import WowInit from "@/components/ui/wow"; // ✅ no need for .tsx in import
+import "animate.css/animate.min.css";
+
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      {/* ✅ WOW.js initialized once for the whole app */}
+      <WowInit />
+
+      {/* ✅ Toasts */}
       <Toaster />
       <Sonner />
+
+      {/* ✅ Routing */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
@@ -28,7 +37,7 @@ const App = () => (
           <Route path="/software" element={<Software />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* Catch-all route */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

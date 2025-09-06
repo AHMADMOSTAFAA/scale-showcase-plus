@@ -1,7 +1,10 @@
 import { Card } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
+import { useTranslation } from "react-i18next";
 
 const Gallery = () => {
+  const { t } = useTranslation();
+
   const cardinalImages = [
     "https://ictcoegypt.com/wp-content/uploads/2022/10/3cbb283d-c314-4979-ab1d-7902f18c621e-150x150.jpg",
     "https://ictcoegypt.com/wp-content/uploads/2022/10/5c37436d-a572-4a7a-8f1c-2fec5f5c3d96-150x150.jpg",
@@ -40,35 +43,36 @@ const Gallery = () => {
     "https://ictcoegypt.com/wp-content/uploads/2022/10/unnamed-1-225x300.jpg"
   ];
 
-  return (
+ return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
       <Navbar />
       <div className="container py-8 md:py-16">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-4">
-            Gallery
+          <h1 className="text-5xl md:text-5x1 pb-2 font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-4">
+            {t("gallery.title")}
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Explore our events, seminars, and team celebrations
+            {t("gallery.subtitle")}
           </p>
         </div>
 
         {/* Cardinal Seminar */}
         <Card className="p-8 mb-12 border-primary/20 bg-white/50 backdrop-blur-sm">
-          <h2 className="text-3xl font-bold text-primary mb-6">Cardinal Seminar</h2>
+          <h2 className="text-3xl font-bold text-primary mb-6">
+            {t("gallery.cardinal.title")}
+          </h2>
           <p className="text-muted-foreground mb-6">
-            Professional training seminars and workshops conducted with Cardinal Scale Manufacturing Company,
-            showcasing the latest weighing technologies and solutions.
+            {t("gallery.cardinal.description")}
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4">
             {cardinalImages.map((image, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="aspect-square rounded-lg overflow-hidden bg-muted hover:scale-105 transition-transform duration-300 cursor-pointer"
               >
-                <img 
-                  src={image} 
+                <img
+                  src={image}
                   alt={`Cardinal Seminar ${index + 1}`}
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -80,19 +84,20 @@ const Gallery = () => {
 
         {/* Mettler Toledo Seminar */}
         <Card className="p-8 mb-12 border-primary/20 bg-white/50 backdrop-blur-sm">
-          <h2 className="text-3xl font-bold text-primary mb-6">Mettler Toledo Seminar</h2>
+          <h2 className="text-3xl font-bold text-primary mb-6">
+            {t("gallery.mettler.title")}
+          </h2>
           <p className="text-muted-foreground mb-6">
-            Advanced technical seminars and training sessions with Mettler Toledo, focusing on precision weighing
-            solutions and laboratory equipment technologies.
+            {t("gallery.mettler.description")}
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
             {mettlerImages.map((image, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="aspect-square rounded-lg overflow-hidden bg-muted hover:scale-105 transition-transform duration-300 cursor-pointer"
               >
-                <img 
-                  src={image} 
+                <img
+                  src={image}
                   alt={`Mettler Toledo Seminar ${index + 1}`}
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -104,21 +109,22 @@ const Gallery = () => {
 
         {/* ICTCO Team Celebration */}
         <Card className="p-8 mb-12 border-primary/20 bg-white/50 backdrop-blur-sm">
-          <h2 className="text-3xl font-bold text-primary mb-6">ICTCO Team Celebration</h2>
+          <h2 className="text-3xl font-bold text-primary mb-6">
+            {t("gallery.team.title")}
+          </h2>
           <p className="text-muted-foreground mb-6">
-            Our dedicated team celebrations and company events, showcasing the spirit and unity 
-            of the ICTCO family throughout our journey of excellence in weighing solutions.
+            {t("gallery.team.description")}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {teamImages.map((image, index) => (
-              <div 
-                key={index} 
-                className="rounded-lg overflow-hidden bg-muted hover:scale-105 transition-transform duration-300 cursor-pointer"
+              <div
+                key={index}
+                className="rounded-lg overflow-hidden h-68 bg-muted hover:scale-105 transition-transform duration-300 cursor-pointer "
               >
-                <img 
-                  src={image} 
+                <img
+                  src={image}
                   alt={`ICTCO Team ${index + 1}`}
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
@@ -130,37 +136,44 @@ const Gallery = () => {
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <Card className="p-6 text-center border-primary/20 bg-gradient-to-br from-primary/10 to-accent/10">
             <div className="text-3xl font-bold text-primary mb-2">7</div>
-            <div className="text-muted-foreground">Cardinal Seminar Photos</div>
+            <div className="text-muted-foreground">
+              {t("gallery.stats.cardinal")}
+            </div>
           </Card>
           <Card className="p-6 text-center border-primary/20 bg-gradient-to-br from-primary/10 to-accent/10">
             <div className="text-3xl font-bold text-primary mb-2">19</div>
-            <div className="text-muted-foreground">Mettler Toledo Seminar Photos</div>
+            <div className="text-muted-foreground">
+              {t("gallery.stats.mettler")}
+            </div>
           </Card>
           <Card className="p-6 text-center border-primary/20 bg-gradient-to-br from-primary/10 to-accent/10">
             <div className="text-3xl font-bold text-primary mb-2">3</div>
-            <div className="text-muted-foreground">Team Celebration Photos</div>
+            <div className="text-muted-foreground">
+              {t("gallery.stats.team")}
+            </div>
           </Card>
         </div>
 
         {/* Call to Action */}
         <Card className="p-8 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 text-center border-primary/20">
-          <h2 className="text-2xl font-bold text-primary mb-4">Join Our Next Event</h2>
+          <h2 className="text-2xl font-bold text-primary mb-4">
+            {t("gallery.cta.title")}
+          </h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Stay updated with our latest seminars, training sessions, and company events.
-            Connect with industry experts and enhance your knowledge in weighing technologies.
+            {t("gallery.cta.description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
             >
-              Contact Us
+              {t("gallery.cta.contact")}
             </a>
-            <a 
-              href="/products" 
+            <a
+              href="/products"
               className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary/5 transition-colors"
             >
-              View Products
+              {t("gallery.cta.products")}
             </a>
           </div>
         </Card>

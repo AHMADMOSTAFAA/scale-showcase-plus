@@ -11,6 +11,24 @@ import petrojet from "@/assets/petrojet.png";
 import egair from "@/assets/egair.jpg";
 import egpost from "@/assets/egpost.jpg";
 import eipico from "@/assets/eipico.jpg";
+import TypedText from "@/components/ui/TypedText";
+import 'animate.css';
+import flintech from "@/assets/lintec-logo.jpg"
+import mettler from "@/assets/toledo.png"
+import baykon from "@/assets/baykon.png"
+import cardinal from "@/assets/cardinal.png"
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import ClientsCarousel from "@/components/ui/clients";
+import turnkey from "@/assets/turnkey.jpg"
+import weigh from "@/assets/icon-weigh.jpg"
+import maintenance from "@/assets/maintenance.jpg"
+import software from "@/assets/software.jpg"
+import WowInit from "@/components/ui/wow";
+import { useTranslation } from "react-i18next";
+
+
 const clients = [
   { name: "Unilever", logo: unilever },
   { name: "Carrefour", logo: carrefour },
@@ -22,286 +40,263 @@ const clients = [
   { name: "Eipico", logo: eipico },
 ];
 
+
 const Index = () => {
+  const {t}= useTranslation();
   return (
-    
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background ">
       <Navbar />
       
-      {/* Hero Section - Exact match to reference design */}
+      {/* Hero Section - Enhanced but keeping original structure */}
       <section 
-        className="relative min-h-[80vh] flex items-center bg-cover bg-center bg-no-repeat"
+        className="relative min-h-[100vh] flex items-center bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-2xl">
-            <p className="text-primary text-lg mb-4 font-medium">
-              We are interested in your success because it means that our strategy is effective
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-3x2">
+            <p className="text-primary text-xl mb-6 font-semibold tracking-wide">
+              {t("index.hero.tagline")}
             </p>
-            
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              
+            <h1 className="text-6xl md:text-7xl font-black mb-8 leading-tight">
               <span className="text-primary">ICTCO</span><br />
-              <span className="text-foreground">Professional Weighing</span><br />
-              <span className="text-foreground">Solutions</span>
+            
+              <TypedText/>
             </h1>
             
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              International General Trading & Contracting Co. (ICTCO) is an Egyptian corporation company established in 1994. We are one of the leading names in weighing machine equipment and business solutions.
+            <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl">
+             {t("index.hero.description")}
             </p>
             
-            <div className="flex gap-4">
-              <Button asChild size="lg" className="px-8">
-                <Link to="/products">Learn More</Link>
+            <div className="flex gap-6">
+              <Button asChild size="lg" className="px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <Link to="/products">{t("index.hero.learnMore")}</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="px-8">
-                <Link to="/contact">Contact Us</Link>
+              <Button asChild variant="outline" size="lg" className="px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <Link to="/contact">{t("index.hero.contactUs")}</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">30+</div>
-              <div className="text-muted-foreground">Years Experience</div>
+ <WowInit /> 
+      {/* Stats Section - Enhanced with better spacing */}
+      <section className="py-20 bg-muted/30 wow animate__animated animate__fadeInUp ">
+      
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-10 text-center">
+            <div className="p-6 rounded-2xl bg-background/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <div className="text-5xl font-black text-primary mb-4">30+</div>
+              <div className="text-muted-foreground text-lg font-semibold">{t("index.hero.years")}</div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">50+</div>
-              <div className="text-muted-foreground">Employees</div>
+            <div className="p-6 rounded-2xl bg-background/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <div className="text-5xl font-black text-primary mb-4">50+</div>
+              <div className="text-muted-foreground text-lg font-semibold">{t("index.hero.employees")}</div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">ISO</div>
-              <div className="text-muted-foreground">Certified Quality</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Our Services</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                    <img src="src/assets/icon-weigh.jpg" alt="" />
-                  </div>
-                </div>
-                <CardTitle className="text-xl">Weighing Solutions</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-sm">
-                  This division markets and services Mechanical and Electronic weighing machines such as laboratory balances, Weighbridges, and hazardous area products.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                    <img src="src/assets/icon-turnkey.jpg" alt="" />
-                  </div>
-                </div>
-                <CardTitle className="text-xl">Turnkey Projects</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-sm">
-                  The Turnkey Projects handled by us involve longer gestation and high-level selling to the government and its agencies.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                    <img src="src/assets/icon-maintenance.jpg" alt="" />
-                  </div>
-                </div>
-                <CardTitle className="text-xl">Maintenance</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-sm">
-                  This division is responsible for the maintenance of all Electronic Scales with professional technicians and engineers.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                    <img src="src/assets/icon-software.jpg" alt="" />
-                  </div>
-                </div>
-                <CardTitle className="text-xl">Software Solutions</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-sm">
-                  ICTCO along with its sister company Millennium started Web Development, Software Development, and Mobile Applications Development.
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* About ICTCO Section */}
-      <section className="py-16 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-8">About ICTCO</h2>
-            <div className="space-y-6 text-lg text-muted-foreground">
-              <p>
-                ICTCO is a multi-product company with a sound financial base. We have varied and wide business interests including investments, manufacturing, turnkey projects, and agency activities.
-              </p>
-              <p>
-                We have a very sound organization with more than 50 employees having varied educational backgrounds and professional skills. ICTCO has a service center that has more than 20 engineers and technicians.
-              </p>
-              <p>
-                ICTCO is working with a high-quality system and has achieved ISO certification 9001/2000 worldwide standards for quality.
-              </p>
+            <div className="p-6 rounded-2xl bg-background/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <div className="text-5xl font-black text-primary mb-4">ISO</div>
+              <div className="text-muted-foreground text-lg font-semibold">{t("index.hero.quality")}</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Our Partners</h2>
-            <p className="text-xl text-muted-foreground">ICTCO is the Sole Agent in Egypt for</p>
+   {/* Services Section - Enhanced with better cards */}
+<section className="py-20 wow animate__animated animate__fadeInUp animate__alternate ">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-5xl font-bold mb-6">{t("index.services.title")}</h2>
+      <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <Card className="text-center hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0 shadow-lg bg-background/80 backdrop-blur-sm">
+        <CardHeader className="pb-4">
+          <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-primary/5 flex items-center justify-center shadow-lg">
+            <div className="w-14 h-14 rounded-xl flex items-center justify-center">
+              <img src={weigh} alt="" className="w-10 h-10 object-contain" />
+            </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <div className="h-16 mb-4 flex items-center justify-center">
-                <div className="w-32 h-12 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
-                  <img src="src/assets/lintec-logo.jpg" alt="" />
-                </div>
-              </div>
-              <CardTitle className="text-xl text-primary mb-2">Flintec</CardTitle>
-              <CardDescription>Germany</CardDescription>
-            </Card>
+          <CardTitle className="text-2xl font-bold">{t("index.services.weighingSolutions.title")}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <CardDescription className="text-base leading-relaxed">
+            {t("index.services.weighingSolutions.description")}
+          </CardDescription>
+        </CardContent>
+      </Card>
 
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <div className="h-16 mb-4 flex items-center justify-center">
-                <div className="w-32 h-12 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
-                   <img src="src/assets/toledo.png" alt="" />
-                </div>
-              </div>
-              <CardTitle className="text-xl text-primary mb-2">Mettler Toledo</CardTitle>
-              <CardDescription>Global</CardDescription>
-            </Card>
-
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <div className="h-16 mb-4 flex items-center justify-center">
-                <div className="w-32 h-12 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
-                 <img src="src/assets/baykon.png" alt="" />
-                </div>
-              </div>
-              <CardTitle className="text-xl text-primary mb-2">Baykon</CardTitle>
-              <CardDescription>Turkey</CardDescription>
-            </Card>
-
-            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-              <div className="h-16 mb-4 flex items-center justify-center">
-                <div className="w-32 h-12 bg-gradient-to-r from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
-                   <img src="src/assets/cardinal.png" alt="" />
-                </div>
-              </div>
-              <CardTitle className="text-xl text-primary mb-2">Cardinal</CardTitle>
-              <CardDescription>USA</CardDescription>
-            </Card>
+      <Card className="text-center hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0 shadow-lg bg-background/80 backdrop-blur-sm">
+        <CardHeader className="pb-4">
+          <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-primary/5 flex items-center justify-center shadow-lg">
+            <div className="w-14 h-14  rounded-xl flex items-center justify-center">
+              <img src={turnkey} alt="" className="w-10 h-10 object-contain" />
+            </div>
           </div>
-        </div>
-      </section>
+          <CardTitle className="text-2xl font-bold">{t("index.services.turnkeyProjects.title")}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <CardDescription className="text-base leading-relaxed">
+            {t("index.services.turnkeyProjects.description")}
+          </CardDescription>
+        </CardContent>
+      </Card>
 
-      {/* Valued Clients Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Our Valued Clients</h2>
+      <Card className="text-center hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0 shadow-lg bg-background/80 backdrop-blur-sm">
+        <CardHeader className="pb-4">
+          <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-primary/5 flex items-center justify-center shadow-lg">
+            <div className="w-14 h-14 rounded-xl flex items-center justify-center">
+              <img src={maintenance} alt="" className="w-10 h-10 object-contain" />
+            </div>
           </div>
-          
-         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-  {clients.map((client) => (
-    <Card
-      key={client.name}
-      className="p-4 text-center hover:shadow-lg transition-shadow"
-    >
-      <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
-        <img
-          src={client.logo}
-          alt={client.name}
-          className="max-h-full max-w-full object-contain"
-        />
+          <CardTitle className="text-2xl font-bold">{t("index.services.maintenance.title")}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <CardDescription className="text-base leading-relaxed">
+            {t("index.services.maintenance.description")}
+          </CardDescription>
+        </CardContent>
+      </Card>
+
+      <Card className="text-center hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0 shadow-lg bg-background/80 backdrop-blur-sm">
+        <CardHeader className="pb-4">
+          <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-primary/5 flex items-center justify-center shadow-lg">
+            <div className="w-14 h-14  rounded-xl flex items-center justify-center">
+              <img src={software} alt="" className="w-10 h-10 object-contain" />
+            </div>
+          </div>
+          <CardTitle className="text-2xl font-bold">{t("index.services.softwareSolutions.title")}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <CardDescription className="text-base leading-relaxed">
+            {t("index.services.softwareSolutions.description")}
+          </CardDescription>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
+
+
+{/* About ICTCO Section */}
+<section className="py-20 bg-muted/50">
+  <div className="container mx-auto px-6">
+    <div className="max-w-5xl mx-auto text-center">
+      <h2 className="text-5xl font-bold mb-6">{t("index.about.title")}</h2>
+      <div className="mx-auto rounded-full mb-12"></div>
+      <div className="space-y-8 text-xl text-muted-foreground leading-relaxed">
+        <p className="p-8 backdrop-blur-sm rounded-2xl shadow-lg">
+          {t("index.about.description")}
+        </p>
       </div>
-      <p className="text-xs text-muted-foreground">{client.name}</p>
-    </Card>
-  ))}
-</div>
+    </div>
+  </div>
+</section>
 
-        </div>
-      </section>
+{/* Partners Section */}
+<section className="py-20">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-16">
+      <h2 className="text-5xl font-bold mb-6">{t("index.partners.title")}</h2>
+      <p className="text-2xl text-muted-foreground mb-6">{t("index.partners.subtitle")}</p>
+      <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+    </div>
 
-      {/* Additional Stats Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-primary mb-2">2</div>
-              <div className="text-muted-foreground">Maintenance Branches</div>
-              <div className="text-sm text-muted-foreground mt-1">Cairo & Alexandria</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-primary mb-2">20+</div>
-              <div className="text-muted-foreground">Engineers & Technicians</div>
-              <div className="text-sm text-muted-foreground mt-1">Service Center</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-primary mb-2">Global</div>
-              <div className="text-muted-foreground">Training Programs</div>
-              <div className="text-sm text-muted-foreground mt-1">UK, Turkey, USA</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-muted-foreground">Support Available</div>
-              <div className="text-sm text-muted-foreground mt-1">Technical Assistance</div>
-            </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <Card className="text-center p-8 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0 shadow-lg bg-background/80 backdrop-blur-sm">
+        <div className="h-20 mb-6 flex items-center justify-center">
+          <div className="w-36 h-16 rounded-xl flex items-center justify-center shadow-md">
+            <img src={flintech} alt="" className="max-w-full max-h-full object-contain" />
           </div>
         </div>
-      </section>
+        <CardTitle className="text-2xl text-primary mb-3 font-bold">{t("index.partners.flintec.name")}</CardTitle>
+        <CardDescription className="text-lg font-semibold">{t("index.partners.flintec.country")}</CardDescription>
+      </Card>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Contact us today for professional weighing solutions and expert consultation.
-          </p>
-          <div className="flex justify-center gap-4">
-            <Button asChild size="lg" variant="secondary">
-              <Link to="/products">View Products</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              <Link to="/contact">Contact Us</Link>
-            </Button>
+      <Card className="text-center p-8 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0 shadow-lg bg-background/80 backdrop-blur-sm">
+        <div className="h-20 mb-6 flex items-center justify-center">
+          <div className="w-36 h-16 rounded-xl flex items-center justify-center shadow-md">
+            <img src={mettler} alt="" className="max-w-full max-h-full object-contain" />
           </div>
         </div>
-      </section>
+        <CardTitle className="text-2xl text-primary mb-3 font-bold">{t("index.partners.mettlerToledo.name")}</CardTitle>
+        <CardDescription className="text-lg font-semibold">{t("index.partners.mettlerToledo.country")}</CardDescription>
+      </Card>
+
+      <Card className="text-center p-8 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0 shadow-lg bg-background/80 backdrop-blur-sm">
+        <div className="h-20 mb-6 flex items-center justify-center">
+          <div className="w-36 h-16 rounded-xl flex items-center justify-center shadow-md">
+            <img src={baykon} alt="" className="max-w-full max-h-full object-contain" />
+          </div>
+        </div>
+        <CardTitle className="text-2xl text-primary mb-3 font-bold">{t("index.partners.baykon.name")}</CardTitle>
+        <CardDescription className="text-lg font-semibold">{t("index.partners.baykon.country")}</CardDescription>
+      </Card>
+
+      <Card className="text-center p-8 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0 shadow-lg bg-background/80 backdrop-blur-sm">
+        <div className="h-20 mb-6 flex items-center justify-center">
+          <div className="w-36 h-16 rounded-xl flex items-center justify-center shadow-md">
+            <img src={cardinal} alt="" className="max-w-full max-h-full object-contain" />
+          </div>
+        </div>
+        <CardTitle className="text-2xl text-primary mb-3 font-bold">{t("index.partners.cardinal.name")}</CardTitle>
+        <CardDescription className="text-lg font-semibold">{t("index.partners.cardinal.country")}</CardDescription>
+      </Card>
+    </div>
+  </div>
+</section>
+
+{/* Additional Stats Section */}
+<section className="py-20">
+  <div className="container mx-auto px-6">
+    <div className="grid md:grid-cols-4 gap-8 text-center">
+      <div className="p-8 rounded-2xl bg-background shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+        <div className="text-4xl font-black text-primary mb-4">{t("index.additionalStats.maintenanceBranches.number")}</div>
+        <div className="text-muted-foreground text-lg font-semibold mb-2">{t("index.additionalStats.maintenanceBranches.title")}</div>
+        <div className="text-base text-muted-foreground">{t("index.additionalStats.maintenanceBranches.subtitle")}</div>
+      </div>
+
+      <div className="p-8 rounded-2xl bg-background shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+        <div className="text-4xl font-black text-primary mb-4">{t("index.additionalStats.engineers.number")}</div>
+        <div className="text-muted-foreground text-lg font-semibold mb-2">{t("index.additionalStats.engineers.title")}</div>
+        <div className="text-base text-muted-foreground">{t("index.additionalStats.engineers.subtitle")}</div>
+      </div>
+
+      <div className="p-8 rounded-2xl bg-background shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+        <div className="text-4xl font-black text-primary mb-4">{t("index.additionalStats.globalTraining.number")}</div>
+        <div className="text-muted-foreground text-lg font-semibold mb-2">{t("index.additionalStats.globalTraining.title")}</div>
+        <div className="text-base text-muted-foreground">{t("index.additionalStats.globalTraining.subtitle")}</div>
+      </div>
+
+      <div className="p-8 rounded-2xl bg-background shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+        <div className="text-4xl font-black text-primary mb-4">{t("index.additionalStats.support.number")}</div>
+        <div className="text-muted-foreground text-lg font-semibold mb-2">{t("index.additionalStats.support.title")}</div>
+        <div className="text-base text-muted-foreground">{t("index.additionalStats.support.subtitle")}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{/* CTA Section */}
+<section className="py-20 bg-primary text-primary-foreground">
+  <div className="container mx-auto px-6 text-center">
+    <h2 className="text-5xl font-bold mb-6">{t("index.cta.title")}</h2>
+    <p className="text-2xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
+      {t("index.cta.description")}
+    </p>
+    <div className="flex justify-center gap-6">
+      <Button asChild size="lg" variant="secondary" className="px-10 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+        <Link to="/products">{t("index.cta.viewProducts")}</Link>
+      </Button>
+      <Button asChild size="lg" variant="outline" className="px-10 py-4 text-lg font-semibold rounded-xl bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+        <Link to="/contact">{t("index.cta.contactUs")}</Link>
+      </Button>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };

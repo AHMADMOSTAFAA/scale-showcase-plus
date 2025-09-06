@@ -6,68 +6,61 @@ import { MapPin, Phone, Mail, Clock, Users, Award } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("xwpnnrvj"); //  Formspree ID
+  const [state, handleSubmit] = useForm("xwpnnrvj"); // Formspree ID
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-primary/5">
       <Navbar />
       <div className="container py-8 md:py-16">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-4">
-            Contact Us
+        <div className="text-center mb-12 ">
+          <h1 className="text-4xl py-16 md:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary  bg-clip-text text-transparent mb-4">
+            {t("contact.title")}
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Get in touch with our experienced team for all your weighing
-            solution needs
+            {t("contact.subtitle")}
           </p>
         </div>
 
         {/* About ICTCO Section */}
         <Card className="p-8 mb-12 border-primary/20 bg-white/50 backdrop-blur-sm">
-          <h2 className="text-3xl font-bold text-primary mb-6">About ICTCO</h2>
+          <h2 className="text-3xl font-bold text-primary mb-6">
+            {t("contact.aboutTitle")}
+          </h2>
           <div className="grid lg:grid-cols-2 gap-8">
             <div>
               <p className="text-muted-foreground mb-4">
-                <strong>
-                  International General Trading & Contracting Co. (ICTCO)
-                </strong>{" "}
-                is an Egyptian corporation company established in 1994. ICTCO is
-                a multi-product company with a sound financial base. We have
-                varied and wide business interests including investments,
-                manufacturing, turnkey projects, and agency activities.
+                <strong>{t("contact.about.company")}</strong>{" "}
+                {t("contact.about.description1")}
               </p>
               <p className="text-muted-foreground mb-4">
-                Moreover, ICTCO is one of the leading names in weighing machine
-                equipment and business solutions. We have a very sound
-                organization with more than 50 employees having varied
-                educational backgrounds and professional skills.
+                {t("contact.about.description2")}
               </p>
               <p className="text-muted-foreground">
-                ICTCO has a service center that has more than 20 engineers and
-                technicians to perform after-sales service and all installations
-                that are linked to the network.
+                {t("contact.about.description3")}
               </p>
             </div>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Users className="h-6 w-6 text-primary" />
                 <span className="text-muted-foreground">
-                  50+ Employees with varied expertise
+                  {t("contact.about.employees")}
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 <Award className="h-6 w-6 text-primary" />
                 <span className="text-muted-foreground">
-                  ISO 9001/2000 Certified
+                  {t("contact.about.iso")}
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-6 w-6 text-primary" />
                 <span className="text-muted-foreground">
-                  2 Maintenance branches (Cairo & Alexandria)
+                  {t("contact.about.branches")}
                 </span>
               </div>
             </div>
@@ -79,19 +72,17 @@ const Contact = () => {
           {/* Contact Information */}
           <Card className="p-8 border-primary/20 bg-white/50 backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-primary mb-6">
-              Contact Information
+              {t("contact.info.title")}
             </h2>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <MapPin className="h-6 w-6 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">
-                    Head Office - Cairo
+                    {t("contact.info.cairo.title")}
                   </h3>
                   <p className="text-muted-foreground">
-                    International General Trading & Contracting Co.
-                    <br />
-                    Cairo, Egypt
+                    {t("contact.info.cairo.details")}
                   </p>
                 </div>
               </div>
@@ -100,12 +91,10 @@ const Contact = () => {
                 <MapPin className="h-6 w-6 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">
-                    Branch Office - Alexandria
+                    {t("contact.info.alex.title")}
                   </h3>
                   <p className="text-muted-foreground">
-                    ICTCO Alexandria Branch
-                    <br />
-                    Alexandria, Egypt
+                    {t("contact.info.alex.details")}
                   </p>
                 </div>
               </div>
@@ -113,16 +102,24 @@ const Contact = () => {
               <div className="flex items-center gap-4">
                 <Phone className="h-6 w-6 text-primary" />
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                  <p className="text-muted-foreground">Available upon request</p>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    {t("contact.info.phone.title")}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {t("contact.info.phone.details")}
+                  </p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
                 <Mail className="h-6 w-6 text-primary" />
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <p className="text-muted-foreground">Available upon request</p>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    {t("contact.info.email.title")}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {t("contact.info.email.details")}
+                  </p>
                 </div>
               </div>
 
@@ -130,12 +127,10 @@ const Contact = () => {
                 <Clock className="h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">
-                    Business Hours
+                    {t("contact.info.hours.title")}
                   </h3>
                   <p className="text-muted-foreground">
-                    Sunday - Thursday: 9:00 AM - 5:00 PM
-                    <br />
-                    Saturday: 9:00 AM - 2:00 PM
+                    {t("contact.info.hours.details")}
                   </p>
                 </div>
               </div>
@@ -145,16 +140,16 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="p-8 border-primary/20 bg-white/50 backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-primary mb-6">
-              Send us a Message
+              {t("contact.form.title")}
             </h2>
 
             {state.succeeded ? (
               <div className="text-center">
                 <h3 className="text-xl font-semibold text-primary mb-2">
-                  ✅ Message Sent
+                  ✅ {t("contact.form.successTitle")}
                 </h3>
                 <p className="text-muted-foreground">
-                  Thank you for contacting us. We’ll reply as soon as possible.
+                  {t("contact.form.successMessage")}
                 </p>
               </div>
             ) : (
@@ -162,21 +157,21 @@ const Contact = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium text-foreground mb-2 block">
-                      First Name
+                      {t("contact.form.firstName")}
                     </label>
                     <Input
                       name="firstName"
-                      placeholder="Enter your first name"
+                      placeholder={t("contact.form.firstNamePlaceholder")}
                       required
                     />
                   </div>
                   <div>
                     <label className="text-sm font-medium text-foreground mb-2 block">
-                      Last Name
+                      {t("contact.form.lastName")}
                     </label>
                     <Input
                       name="lastName"
-                      placeholder="Enter your last name"
+                      placeholder={t("contact.form.lastNamePlaceholder")}
                       required
                     />
                   </div>
@@ -184,12 +179,12 @@ const Contact = () => {
 
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Email
+                    {t("contact.form.email")}
                   </label>
                   <Input
                     type="email"
                     name="email"
-                    placeholder="Enter your email address"
+                    placeholder={t("contact.form.emailPlaceholder")}
                     required
                   />
                   <ValidationError
@@ -201,39 +196,42 @@ const Contact = () => {
 
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Phone
+                    {t("contact.form.phone")}
                   </label>
                   <Input
                     type="tel"
                     name="phone"
-                    placeholder="Enter your phone number"
+                    placeholder={t("contact.form.phonePlaceholder")}
                   />
                 </div>
 
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Company
+                    {t("contact.form.company")}
                   </label>
-                  <Input name="company" placeholder="Enter your company name" />
+                  <Input
+                    name="company"
+                    placeholder={t("contact.form.companyPlaceholder")}
+                  />
                 </div>
 
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Subject
+                    {t("contact.form.subject")}
                   </label>
                   <Input
                     name="subject"
-                    placeholder="Enter the subject of your inquiry"
+                    placeholder={t("contact.form.subjectPlaceholder")}
                   />
                 </div>
 
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Message
+                    {t("contact.form.message")}
                   </label>
                   <Textarea
                     name="message"
-                    placeholder="Please describe your requirements or questions in detail..."
+                    placeholder={t("contact.form.messagePlaceholder")}
                     className="min-h-[120px]"
                     required
                   />
@@ -249,7 +247,9 @@ const Contact = () => {
                   disabled={state.submitting}
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
                 >
-                  {state.submitting ? "Sending..." : "Send Message"}
+                  {state.submitting
+                    ? t("contact.form.sending")
+                    : t("contact.form.send")}
                 </Button>
               </form>
             )}
@@ -259,37 +259,33 @@ const Contact = () => {
         {/* Quality & Certifications */}
         <Card className="p-8 mb-12 border-primary/20 bg-white/50 backdrop-blur-sm">
           <h2 className="text-2xl font-bold text-primary mb-6">
-            Quality & Certifications
+            {t("contact.quality.title")}
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="font-semibold text-foreground mb-3">
-                Quality Standards
+                {t("contact.quality.standardsTitle")}
               </h3>
               <p className="text-muted-foreground mb-4">
-                ICTCO is working with a high-quality system and has achieved{" "}
-                <strong>ISO certification 9001/2000</strong> worldwide standards
-                for quality. We work closely with our customers on local and
-                international bases.
+                {t("contact.quality.standardsText1")}{" "}
+                <strong>ISO 9001/2000</strong>{" "}
+                {t("contact.quality.standardsText2")}
               </p>
               <p className="text-muted-foreground">
-                ICTCO always sends its qualified engineers to participate in
-                training courses in UK, Turkey, and U.S.A. So they are always
-                ready for new implementing technologies and developments in all
-                versions.
+                {t("contact.quality.training")}
               </p>
             </div>
             <div>
               <h3 className="font-semibold text-foreground mb-3">
-                Our Expertise
+                {t("contact.quality.expertiseTitle")}
               </h3>
               <ul className="text-muted-foreground space-y-2">
-                <li>• 30+ years of industry experience</li>
-                <li>• International training and certifications</li>
-                <li>• Continuous technology updates</li>
-                <li>• Comprehensive after-sales service</li>
-                <li>• Multi-lingual technical support</li>
-                <li>• Global best practices implementation</li>
+                <li>{t("contact.quality.expertise1")}</li>
+                <li>{t("contact.quality.expertise2")}</li>
+                <li>{t("contact.quality.expertise3")}</li>
+                <li>{t("contact.quality.expertise4")}</li>
+                <li>{t("contact.quality.expertise5")}</li>
+                <li>{t("contact.quality.expertise6")}</li>
               </ul>
             </div>
           </div>
@@ -298,7 +294,7 @@ const Contact = () => {
         {/* Our Partners */}
         <Card className="p-8 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 text-center border-primary/20">
           <h2 className="text-2xl font-bold text-primary mb-6">
-            ICTCO is the Sole Agent in Egypt
+            {t("contact.partners.title")}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
             <div className="text-center">
@@ -306,7 +302,9 @@ const Contact = () => {
               <div className="text-sm text-muted-foreground">Germany</div>
             </div>
             <div className="text-center">
-              <div className="font-semibold text-foreground">Mettler Toledo</div>
+              <div className="font-semibold text-foreground">
+                Mettler Toledo
+              </div>
               <div className="text-sm text-muted-foreground">Switzerland</div>
             </div>
             <div className="text-center">
@@ -319,9 +317,7 @@ const Contact = () => {
             </div>
           </div>
           <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
-            As exclusive representatives of these world-renowned brands, we
-            bring you the finest weighing solutions with full technical support
-            and service.
+            {t("contact.partners.description")}
           </p>
         </Card>
       </div>

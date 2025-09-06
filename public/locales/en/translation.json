@@ -1,0 +1,424 @@
+{
+  "est": "EST. 1994",
+  "Home": "Home",
+  "Products": "Products",
+  "Software": "Software",
+  "Gallery": "Gallery",
+
+  "index": {
+    "hero": {
+      "tagline": "We are interested in your success because it means that our strategy is effective",
+      "description": "International General Trading & Contracting Co. (ICTCO) is an Egyptian corporation company established in 1994. We are one of the leading names in weighing machine equipment and business solutions.",
+      "learnMore": "Learn More",
+      "contactUs": "Contact Us",
+      "employees":"Employees",
+      "years":"Years experience",
+       "quality":"certified quality",
+     "typedText": {
+  "professionalWeighingSolutions": "Professional Weighing Solutions",
+  "trustedIndustrialPartner": "Trusted Industrial Partner", 
+  "innovatingSince1994": "Innovating Since 1994"
+}
+    },
+    
+    "stats": {
+      "yearsExperience": "Years Experience",
+      "employees": "Employees",
+      "isoQuality": "Certified Quality"
+    },
+    "services": {
+      "title": "Our Services",
+      "weighingSolutions": {
+        "title": "Weighing Solutions",
+        "description": "This division markets and services Mechanical and Electronic weighing machines such as laboratory balances, Weighbridges, and hazardous area products."
+      },
+      "turnkeyProjects": {
+        "title": "Turnkey Projects",
+        "description": "The Turnkey Projects handled by us involve longer gestation and high-level selling to the government and its agencies."
+      },
+      "maintenance": {
+        "title": "Maintenance",
+        "description": "This division is responsible for the maintenance of all Electronic Scales with professional technicians and engineers."
+      },
+      "softwareSolutions": {
+        "title": "Software Solutions",
+        "description": "ICTCO along with its sister company Millennium started Web Development, Software Development, and Mobile Applications Development."
+      }
+    },
+    "about": {
+      "title": "About ICTCO",
+      "description": "ICTCO is a multi-product company with a sound financial base. We have varied and wide business interests including investments, manufacturing, turnkey projects, and agency activities. We have a very sound organization with more than 50 employees having varied educational backgrounds and professional skills. ICTCO has a service center that has more than 20 engineers and technicians. We have a very sound organization with more than 50 employees having varied educational backgrounds and professional skills. ICTCO has a service center that has more than 20 engineers and technicians."
+    },
+    "partners": {
+      "title": "Our Partners",
+      "subtitle": "ICTCO is the Sole Agent in Egypt for",
+      "flintec": {
+        "name": "Flintec",
+        "country": "Germany"
+      },
+      "mettlerToledo": {
+        "name": "Mettler Toledo",
+        "country": "Global"
+      },
+      "baykon": {
+        "name": "Baykon",
+        "country": "Turkey"
+      },
+      "cardinal": {
+        "name": "Cardinal",
+        "country": "USA"
+      }
+    },
+       "additionalStats": {
+      "maintenanceBranches": {
+        "number": "2",
+        "title": "Maintenance Branches",
+        "subtitle": "Cairo & Alexandria"
+      },
+      "engineers": {
+        "number": "20+",
+        "title": "Engineers & Technicians",
+        "subtitle": "Service Center"
+      },
+      "globalTraining": {
+        "number": "Global",
+        "title": "Training Programs",
+        "subtitle": "UK, Turkey, USA"
+      },
+      "support": {
+        "number": "24/7",
+        "title": "Support Available",
+        "subtitle": "Technical Assistance"
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Contact us today for professional weighing solutions and expert consultation.",
+      "viewProducts": "View Products",
+      "contactUs": "Contact Us"
+    }
+  },
+
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our experienced team for all your weighing solution needs",
+    "aboutTitle": "About ICTCO",
+    "about": {
+      "company": "International General Trading & Contracting Co. (ICTCO)",
+      "description1": "is an Egyptian corporation company established in 1994. ICTCO is a multi-product company with a sound financial base. We have varied and wide business interests including investments, manufacturing, turnkey projects, and agency activities.",
+      "description2": "Moreover, ICTCO is one of the leading names in weighing machine equipment and business solutions. We have a very sound organization with more than 50 employees having varied educational backgrounds and professional skills.",
+      "description3": "ICTCO has a service center that has more than 20 engineers and technicians to perform after-sales service and all installations that are linked to the network.",
+      "employees": "50+ Employees with varied expertise",
+      "iso": "ISO 9001/2000 Certified",
+      "branches": "2 Maintenance branches (Cairo & Alexandria)"
+    },
+    "info": {
+      "title": "Contact Information",
+      "cairo": {
+        "title": "Head Office - Cairo",
+        "details": "International General Trading & Contracting Co.\nCairo, Egypt"
+      },
+      "alex": {
+        "title": "Branch Office - Alexandria",
+        "details": "ICTCO Alexandria Branch\nAlexandria, Egypt"
+      },
+      "phone": {
+        "title": "Phone",
+        "details": "Available upon request"
+      },
+      "email": {
+        "title": "Email",
+        "details": "Available upon request"
+      },
+      "hours": {
+        "title": "Business Hours",
+        "details": "Sunday - Thursday: 9:00 AM - 5:00 PM\nSaturday: 9:00 AM - 2:00 PM"
+      }
+    },
+    "form": {
+      "title": "Send us a Message",
+      "successTitle": "Message Sent",
+      "successMessage": "Thank you for contacting us. We'll reply as soon as possible.",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Enter your first name",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Enter your last name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email address",
+      "phone": "Phone",
+      "phonePlaceholder": "Enter your phone number",
+      "company": "Company",
+      "companyPlaceholder": "Enter your company name",
+      "subject": "Subject",
+      "subjectPlaceholder": "Enter the subject of your inquiry",
+      "message": "Message",
+      "messagePlaceholder": "Please describe your requirements or questions in detail...",
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "quality": {
+      "title": "Quality & Certifications",
+      "standardsTitle": "Quality Standards",
+      "standardsText1": "ICTCO is working with a high-quality system and has achieved",
+      "standardsText2": "worldwide standards for quality. We work closely with our customers on local and international bases.",
+      "training": "ICTCO always sends its qualified engineers to participate in training courses in UK, Turkey, and U.S.A. So they are always ready for new implementing technologies and developments in all versions.",
+      "expertiseTitle": "Our Expertise",
+      "expertise1": "• 30+ years of industry experience",
+      "expertise2": "• International training and certifications",
+      "expertise3": "• Continuous technology updates",
+      "expertise4": "• Comprehensive after-sales service",
+      "expertise5": "• Multi-lingual technical support",
+      "expertise6": "• Global best practices implementation"
+    },
+    "partners": {
+      "title": "ICTCO is the Sole Agent in Egypt",
+      "description": "As exclusive representatives of these world-renowned brands, we bring you the finest weighing solutions with full technical support and service."
+    }
+  },
+
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Explore our events, seminars, and team celebrations",
+    "cardinal": {
+      "title": "Cardinal Seminar",
+      "description": "Professional training seminars and workshops conducted with Cardinal Scale Manufacturing Company, showcasing the latest weighing technologies and solutions."
+    },
+    "mettler": {
+      "title": "Mettler Toledo Seminar",
+      "description": "Advanced technical seminars and training sessions with Mettler Toledo, focusing on precision weighing solutions and laboratory equipment technologies."
+    },
+    "team": {
+      "title": "ICTCO Team Celebration",
+      "description": "Our dedicated team celebrations and company events, showcasing the spirit and unity of the ICTCO family throughout our journey of excellence in weighing solutions."
+    },
+    "stats": {
+      "cardinal": "Cardinal Seminar Photos",
+      "mettler": "Mettler Toledo Seminar Photos",
+      "team": "Team Celebration Photos"
+    },
+    "cta": {
+      "title": "Join Our Next Event",
+      "description": "Stay updated with our latest seminars, training sessions, and company events. Connect with industry experts and enhance your knowledge in weighing technologies.",
+      "contact": "Contact Us",
+      "products": "View Products"
+    }
+  },
+
+  "software": {
+    "smartWeighingSoftware": "Smart Weighing Software",
+    "softwareSubtitle": "Advanced software solutions for all your weighing system needs",
+    "features": "Features",
+    "featuresList": {
+      "dataEntryTitle": "Data Entry for All Users, Clients, Vehicles, and Items",
+      "dataEntryDesc": "Comprehensive database management for all weighing operations",
+      "printCardsTitle": "Print Weight Cards with Complete Information",
+      "printCardsList": [
+        "Vehicle number",
+        "Driver's name",
+        "Weight type number (In/Out)",
+        "Client name",
+        "City name",
+        "First weight",
+        "Second weight",
+        "Net weight",
+        "Entry time and date",
+        "Exit time and date",
+        "Notes"
+      ],
+      "reportingTitle": "Advanced Reporting System",
+      "reportingDesc": "Create reports with the ability to combine multiple search criteria into the same report and export it to Excel. Review stored data and print specific cards that were previously saved.",
+      "printerTitle": "Universal Printer Compatibility",
+      "printerDesc": "The program can be configured to work with any type of printer (LASER – DESK JET – DOT MATRIX).",
+      "connectivityTitle": "Universal Device Connectivity",
+      "connectivityDesc": "The program automatically works with any weight reading device that has an RS232 serial connection or Ethernet. This solution is available with Access DB."
+    },
+    "solutions": "Software Solutions",
+    "solutionsList": [
+      {
+        "title": "Weighing Management System",
+        "desc": "Complete solution for managing all weighing operations with real-time data processing and reporting capabilities."
+      },
+      {
+        "title": "Data Collection & Analysis",
+        "desc": "Advanced data collection tools with statistical analysis and trend reporting for operational insights."
+      },
+      {
+        "title": "Truck Scale Software",
+        "desc": "Specialized software for truck scale operations with vehicle identification and load management."
+      },
+      {
+        "title": "Quality Control Systems",
+        "desc": "Statistical quality control software for maintaining product standards and compliance."
+      },
+      {
+        "title": "Remote Monitoring",
+        "desc": "Cloud-based monitoring solutions for real-time system oversight and maintenance alerts."
+      }
+    ],
+    "technicalSpecs": "Technical Specifications",
+    "specs": [
+      {
+        "title": "Database Support",
+        "items": ["Microsoft Access", "SQL Server", "MySQL", "Oracle"]
+      },
+      {
+        "title": "Connectivity",
+        "items": ["RS232 Serial", "Ethernet TCP/IP", "USB", "Wireless"]
+      },
+      {
+        "title": "Operating Systems",
+        "items": ["Windows 10/11", "Windows Server", "Linux", "Web-based"]
+      }
+    ],
+    "ctaTitle": "Get Started with Our Software Solutions",
+    "ctaDesc": "Contact us to learn more about our software solutions and how they can optimize your weighing operations.",
+    "ctaContact": "Contact Us",
+    "ctaProducts": "View Products"
+  },
+  
+ "productsCategory": {
+    "title": "Product Categories",
+    "description": "Explore our full range of industrial weighing solutions. Select a category to view products and detailed specifications.",
+    "searchPlaceholder": "🔎 Search categories...",
+    "filterPlaceholder": "Filter by Category",
+    "allCategories": "All Categories",
+    "products": "products",
+    "categories": {
+      "truck-scales": {
+        "name": "Truck Scale Products",
+        "description": "Heavy-duty truck scales and weighbridges for commercial vehicle weighing",
+        "view": "View Truck Scale Products"
+      },
+      "industrial-scales": {
+        "name": "Industrial Scales Products",
+        "description": "Industrial weighing equipment including indicators and load cells",
+        "view": "View Industrial Scales Products"
+      },
+      "precision-products": {
+        "name": "Precision Scales Products",
+        "description": "High-precision analytical balances and laboratory equipment",
+        "view": "View Precision Scales Products"
+      }
+    },
+    "noMatch": {
+      "title": "🚫 No categories match your search.",
+      "subtitle": "Try adjusting your search or filter options."
+    }
+  },
+ "products": {
+    "title": "Product Categories",
+    "description": "Explore our full range of industrial weighing solutions. Select a category to view products and detailed specifications.",
+    "searchPlaceholder": "🔎 Search categories...",
+    "filterBrand": "Filter by Brand",
+    "filterCategory": "Filter by Category",
+    "allBrands": "All Brands",
+    "allCategories": "All Categories",
+    "keyFeatures": "Key Features",
+    "viewDetails": "View Details",
+    "backCategories": "Back to Categories",
+    "notFound": {
+      "title": "🚫 Category Not Found",
+      "subtitle": "The product category you’re looking for does not exist.",
+      "back": "Back to All Categories"
+    },
+    "noMatch": {
+      "title": "🚫 No categories match your search.",
+      "subtitle": "Try adjusting your search or filter options."
+    },
+    "categories": {
+
+      "truck-scales": {
+        "name": "Truck Scale Products",
+        "description": "Heavy-duty truck scales and weighbridges for commercial vehicle weighing",
+        "view": "View Truck Scale Products"
+      },
+      "industrial-scales": {
+        "name": "Industrial Scales Products",
+        "description": "Industrial weighing equipment including indicators and load cells",
+        "view": "View Industrial Scales Products"
+      },
+      "precision-products": {
+        "name": "Precision Scales Products",
+        "description": "High-precision analytical balances and laboratory equipment",
+        "view": "View Precision Scales Products"
+      }
+    },
+    "items": {
+      "cardinal-swim": {
+        "name": "SWIM Slow-Speed In-Motion Vehicle Scale",
+        "description": "Cardinal Scale's SWIM slow-speed in-motion vehicle scale offers the ideal combination of accuracy, space, speed, and economical price point for weighing fully-loaded semi tractor trailers.",
+        "features": [
+          "Ideal combination of accuracy and speed",
+          "Cost-effective means of measuring truck axle and gross weights",
+          "Occupies only a small fraction of the space needed for a full-length static truck scale",
+          "Perfect for ports, freight terminals, and commercial facilities",
+          "Uses four Cardinal SCA Series Stainless Steel Compression Load Cells",
+          "Single weighbridge contained in a solid lower frame"
+        ],
+        "specifications": {
+          "Type": "Slow-Speed In-Motion",
+          "Load Cells": "4 x Cardinal SCA Series Stainless Steel Compression",
+          "Platform": "Single weighbridge in solid lower frame",
+          "Application": "Semi tractor trailers, commercial vehicles"
+        },
+        "applications": [
+          "Ports and freight terminals",
+          "Commercial vehicle weighing",
+          "Traffic flow management",
+          "Axle and gross weight measurement"
+        ],
+        "category":"Truck-Scales"
+      },
+      "cardinal-armor": {
+        "name": "ARMOR® Series Truck Scales",
+        "description": "ARMOR® series truck scales with steel deck construction and Digital SmartCells for superior durability and accuracy.",
+        "features": [
+          "Steel deck construction for maximum durability",
+          "Digital SmartCell technology",
+          "Superior accuracy and reliability",
+          "Weatherproof design",
+          "Advanced load cell technology",
+          "Easy installation and maintenance"
+        ],
+        "specifications": {
+          "Type": "Static Truck Scale",
+          "Deck Material": "Steel",
+          "Technology": "Digital SmartCells",
+          "Design": "Weatherproof construction"
+        },
+        "applications": [
+          "Commercial weighing facilities",
+          "Industrial applications",
+          "Heavy-duty vehicle weighing",
+          "Trade and commerce"
+        ]
+      },
+      "mettler-vts-202-203": {
+        "name": "VTS 202/203",
+        "description": "Mettler Toledo VTS 202/203 weighbridge systems for reliable and accurate truck weighing applications.",
+        "features": [
+          "Rugged and reliable construction",
+          "Critical for weighing bulk goods",
+          "Industrial scale capability",
+          "High accuracy measurement",
+          "Durable design for heavy use",
+          "Professional weighbridge solution"
+        ],
+        "specifications": {
+          "Type": "Weighbridge System",
+          "Model": "VTS 202/203",
+          "Application": "Truck and vehicle weighing",
+          "Capacity": "Heavy-duty commercial use"
+        },
+        "applications": [
+          "Bulk goods weighing",
+          "Commercial truck weighing",
+          "Industrial facilities",
+          "Trade and logistics"
+        ]
+      }
+    }
+  }
+
+
+}
