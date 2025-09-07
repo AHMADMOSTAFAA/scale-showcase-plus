@@ -278,7 +278,10 @@ const Index = () => {
   </div>
 </section>
 
-
+<div className="wow animate__animated animate__fadeInUp">
+  
+<ClientsCarousel clients={clients} />
+</div>
 {/* CTA Section */}
 <section className="py-20 bg-primary text-primary-foreground">
   <div className="container mx-auto px-6 text-center">

@@ -58,7 +58,7 @@
       },
       "mettlerToledo": {
         "name": "Mettler Toledo",
-        "country": "Global"
+        "country": "Switzerland"
       },
       "baykon": {
         "name": "Baykon",
@@ -202,6 +202,8 @@
       "contact": "Contact Us",
       "products": "View Products"
     }
+  },"carousel":{
+"clients":"Our Valued Clients"
   },
 
   "software": {
@@ -307,6 +309,12 @@
   },
  "products": {
     "title": "Product Categories",
+     "commonUseCases":"use cases",
+    "callForQuote":"call for quote",
+    "emailInquiry":"email us",
+    "specs":"specs",
+    "technicalSpecs":"SPECS",
+    "applications":"Applications",
     "description": "Explore our full range of industrial weighing solutions. Select a category to view products and detailed specifications.",
     "searchPlaceholder": "🔎 Search categories...",
     "filterBrand": "Filter by Brand",
@@ -415,8 +423,527 @@
           "Commercial truck weighing",
           "Industrial facilities",
           "Trade and logistics"
-        ]
-      }
+        ],
+          "category":"Truck-Scales"
+      },
+          "radwag-as220-r1-plus": {
+      "name": "AS 220.R1 PLUS Analytical Balance",
+      "description": "AS 220.R1 PLUS Analytical Balance is a standard analytical weighing device of the SYNERGY LAB line with exceptional precision and modern features.",
+      "features": [
+        "4-digit precision (0.0001g)",
+        "220g capacity",
+        "SYNERGY LAB line technology",
+        "Spacious weighing chamber",
+        "Open-door clearance for easy operation",
+        "Modern constructional solutions",
+        "Exceptional reliability and precision",
+        "Ergonomic mechanical design"
+      ],
+      "specifications": {
+        "Capacity": "220g",
+        "Readability": "0.0001g",
+        "Type": "Analytical Balance",
+        "Series": "AS R1 PLUS",
+        "Line": "SYNERGY LAB"
+      },
+      "applications": [
+        "Laboratory analysis",
+        "Analytical weighing",
+        "Precision measurement",
+        "Research applications",
+        "Quality control",
+        "Scientific analysis"
+      ],
+        "category":"Precision-Scales"
+    },
+    "radwag-as82-220-x2-plus": {
+      "name": "Radwag AS 82/220.X2 PLUS Analytical Balance",
+      "description": "Radwag AS 82/220.X2 PLUS analytical balance with advanced features for precision laboratory work.",
+      "features": [
+        "X2 PLUS technology",
+        "High precision measurement",
+        "Advanced analytical features",
+        "Laboratory grade construction",
+        "Professional design",
+        "Reliable performance"
+      ],
+      "specifications": {
+        "Type": "Analytical Balance",
+        "Model": "AS 82/220.X2 PLUS",
+        "Technology": "X2 PLUS",
+        "Application": "Laboratory precision"
+      },
+      "applications": [
+        "Advanced laboratory analysis",
+        "Precision weighing",
+        "Research applications",
+        "Quality control"
+      ],
+       "category":"Precision-Scales"
+    },
+    "radwag-ps1000-ri": {
+      "name": "Radwag PS 1000 RI Precision Scale",
+      "description": "Radwag PS 1000 RI precision scale for accurate weighing in laboratory and industrial applications.",
+      "features": [
+        "1000g capacity",
+        "RI technology",
+        "Precision weighing capability",
+        "Laboratory and industrial use",
+        "Accurate measurement",
+        "Professional construction"
+      ],
+      "specifications": {
+        "Capacity": "1000g",
+        "Type": "Precision Scale",
+        "Model": "PS 1000 RI",
+        "Technology": "RI"
+      },
+      "applications": [
+        "Laboratory weighing",
+        "Industrial precision applications",
+        "Quality control",
+        "Research work"
+      ],
+       "category":"Precision-Scales"
+    },
+    "radwag-ps3000-x2": {
+      "name": "Radwag PS 3000 X2 Precision Scale",
+      "description": "Radwag PS 3000 X2 precision scale with high capacity for demanding weighing applications.",
+      "features": [
+        "3000g high capacity",
+        "X2 technology",
+        "Demanding application ready",
+        "High precision measurement",
+        "Professional grade",
+        "Reliable performance"
+      ],
+      "specifications": {
+        "Capacity": "3000g",
+        "Type": "Precision Scale",
+        "Model": "PS 3000 X2",
+        "Technology": "X2"
+      },
+      "applications": [
+        "High capacity precision weighing",
+        "Laboratory applications",
+        "Industrial quality control",
+        "Research work"
+      ],
+       "category":"Precision-Scales"
+    },
+"cardinal-805-spectrum": {
+  "name": "805 Spectrum",
+  "description": "Advanced digital weighing indicator with comprehensive features for industrial applications.",
+  "features": [
+    "Digital display technology",
+    "Advanced weighing algorithms",
+    "Industrial-grade construction",
+    "Multiple communication options",
+    "User-friendly interface",
+    "Reliable performance"
+  ],
+  "specifications": {
+    "Type": "Digital Indicator",
+    "Display": "Advanced spectrum display",
+    "Applications": "Industrial weighing"
+  },
+  "applications": [
+    "Industrial weighing systems",
+    "Process control",
+    "Manufacturing applications"
+  ],
+  "category": "Industrial Scales - Indicators"
+}
+,  "cardinal-225-navigator": {
+    "name": "Cardinal 225 Navigator Indicator",
+    "description": "The Cardinal 225 Navigator weight indicator provides reliable weight measurement and control with advanced diagnostic technologies.",
+    "features": [
+      "Navigator technology",
+      "Accurate weight measurement",
+      "Diagnostic capabilities",
+      "Easy-to-use operation",
+      "Durable construction",
+      "Suitable for industrial applications"
+    ],
+    "specifications": {
+      "Type": "Weight Indicator",
+      "Model": "225 Navigator",
+      "Features": "Diagnostic tools"
+    },
+    "applications": [
+      "Scale diagnostic applications",
+      "Weight measurement",
+      "Industrial control systems"
+    ],
+    "category": "Weight Indicators"
+  },
+  "cardinal-205": {
+    "name": "Cardinal 205 Indicator",
+    "description": "The Cardinal 205 weight indicator is a standard industrial indicator offering reliable and proven performance.",
+    "features": [
+      "Standard weighing functions",
+      "Reliable performance",
+      "Easy operation",
+      "Industrial design",
+      "Cost-effective solution",
+      "Proven technology"
+    ],
+    "specifications": {
+      "type": "Weight Indicator",
+      "model": "205",
+      "application": "Standard weighing"
+    },
+    "applications": [
+      "General weighing applications",
+      "Industrial processes",
+      "Basic measurements"
+    ],
+    "category": "Weight Indicators"
+  },
+  "cardinal-ac100k": {
+    "name": "Cardinal AC100K Load Cell",
+    "description": "The Cardinal AC100K load cell provides high-precision weight measurement for industrial applications.",
+    "features": [
+      "High-precision measurement",
+      "Durable industrial design",
+      "Reliable performance",
+      "Robust construction",
+      "Easy installation",
+      "Long service life"
+    ],
+    "specifications": {
+      "type": "Load Cell",
+      "model": "AC100K",
+      "application": "Industrial weighing"
+    },
+    "applications": [
+      "Industrial scales",
+      "Process weighing",
+      "Manufacturing applications"
+    ],
+    "category": "Load Cells"
+  },
+  "cardinal-dc100k": {
+    "name": "Cardinal DC100K Load Cell",
+    "description": "The Cardinal DC100K load cell is designed for accurate weighing in harsh industrial environments.",
+    "features": [
+      "Precision measurement technology",
+      "Suitable for harsh environments",
+      "High reliability",
+      "Industrial design",
+      "Accurate weight sensing",
+      "Professional quality"
+    ],
+    "specifications": {
+      "type": "Load Cell",
+      "model": "DC100K",
+      "environment": "Harsh industrial"
+    },
+    "applications": [
+      "Precision weighing systems",
+      "Industrial automation",
+      "Heavy-duty applications"
+    ],
+    "category": "Load Cells"
+  },
+  "baykon-bx66": {
+    "name": "Baykon BX66 Weight Terminal",
+    "description": "The Baykon BX66 weight terminal provides advanced features for industrial applications.",
+    "features": [
+      "Advanced terminal technology",
+      "Comprehensive weighing functions",
+      "Ready for industrial applications",
+      "User-friendly interface",
+      "Reliable operation",
+      "Professional design"
+    ],
+    "specifications": {
+      "type": "Weight Terminal",
+      "model": "BX66",
+      "features": "Advanced functions"
+    },
+    "applications": [
+      "Industrial weighing systems",
+      "Process control",
+      "Automation applications"
+    ],
+    "category": "Weight Indicators"
+  },
+  "baykon-bx30-fill": {
+    "name": "Baykon BX30 Fill Indicator",
+    "description": "The Baykon BX30 Fill indicator is designed specifically for batch weighing and filling applications.",
+    "features": [
+      "Optimized for filling",
+      "Batch weighing functions",
+      "Precise control",
+      "Industrial design",
+      "Easy operation",
+      "Reliable performance"
+    ],
+    "specifications": {
+      "type": "Filling Indicator",
+      "model": "BX30 Fill",
+      "application": "Batch weighing and filling"
+    },
+    "applications": [
+      "Filling systems",
+      "Batch weighing applications",
+      "Process control"
+    ],
+    "category": "Weight Indicators"
+  },
+  "baykon-bx22s": {
+    "name": "Baykon BX-22 Weight Indicator",
+    "description": "The Baykon BX-22 weight indicator is suitable for standard industrial applications, offering reliability and durable design.",
+    "features": [
+      "Standard weighing functions",
+      "Industrial reliability",
+      "Cost-effective solution",
+      "Easy-to-use operation",
+      "Proven technology",
+      "Durable construction"
+    ],
+    "specifications": {
+      "type": "Weight Indicator",
+      "model": "BX-22",
+      "application": "Standard industrial weighing"
+    },
+    "applications": [
+      "General weighing",
+      "Industrial processes",
+      "Basic measurements"
+    ],
+    "category": "Weight Indicators"
+  }, "baykon-br200s": {
+    "name": "Baykon BR200S Pressure Load Cell",
+    "description": "The Baykon BR200S pressure load cell provides high-precision weight measurement for pressure applications.",
+    "features": [
+      "Pressure load sensing",
+      "High-precision measurement",
+      "Robust construction",
+      "Industrial quality",
+      "Reliable performance",
+      "Easy installation"
+    ],
+    "specifications": {
+      "type": "Pressure Load Cell",
+      "model": "BR200S",
+      "application": "Pressure weighing"
+    },
+    "applications": [
+      "Tank weighing",
+      "Bagging scales",
+      "Pressure applications"
+    ],
+    "category": "Load Cells"
+  },
+  "baykon-bt604": {
+    "name": "Baykon BT604 Tension Load Cell",
+    "description": "The Baykon BT604 tension load cell provides high-precision weight measurement for tension applications.",
+    "features": [
+      "Tension load sensing",
+      "Accurate measurement",
+      "High-quality construction",
+      "Industrial reliability",
+      "Precise performance",
+      "Professional grade"
+    ],
+    "specifications": {
+      "type": "Tension Load Cell",
+      "model": "BT604",
+      "application": "Tension weighing"
+    },
+    "applications": [
+      "Suspended scales",
+      "Crane scales",
+      "Tension applications"
+    ],
+    "category": "Load Cells"
+  },
+  "flintec-ft112": {
+    "name": "Flintec FT-112 Weight Indicator",
+    "description": "The Flintec FT-112 weight indicator is designed for professional industrial applications.",
+    "features": [
+      "Professional weight indicator",
+      "Ready for industrial use",
+      "Advanced functions",
+      "Reliable operation",
+      "User-friendly design",
+      "High performance"
+    ],
+    "specifications": {
+      "type": "Weight Indicator",
+      "model": "FT-112",
+      "category": "Professional industrial"
+    },
+    "applications": [
+      "Industrial weighing",
+      "Process applications",
+      "Professional systems"
+    ],
+    "category": "Weight Indicators"
+  },
+  "flintec-ft111-panel": {
+    "name": "Flintec FT-111 Panel Indicator",
+    "description": "The Flintec FT-111 Panel indicator is designed for panel mounting with integrated industrial functions.",
+    "features": [
+      "Panel mount design",
+      "Compact size",
+      "Industrial functions",
+      "Easy integration",
+      "Reliable operation",
+      "Professional appearance"
+    ],
+    "specifications": {
+      "type": "Panel Indicator",
+      "model": "FT-111 Panel",
+      "mounting": "Panel"
+    },
+    "applications": [
+      "Panel-mounted systems",
+      "Control panels",
+      "Integrated applications"
+    ],
+    "category": "Weight Indicators"
+  },
+  "flintec-ft113-fill": {
+    "name": "Flintec FT-113 Fill Indicator",
+    "description": "The Flintec FT-113 Fill indicator is specialized for batch weighing and filling applications.",
+    "features": [
+      "Specialized for filling",
+      "Batch weighing functions",
+      "Precise control algorithms",
+      "Industrial design",
+      "Efficient operation",
+      "Professional features"
+    ],
+    "specifications": {
+      "type": "Filling Indicator",
+      "model": "FT-113 Fill",
+      "specialization": "Batch weighing and filling"
+    },
+    "applications": [
+      "Filling systems",
+      "Batch weighing operations",
+      "Process control"
+    ],
+    "category": "Weight Indicators"
+  },
+  "flintec-rc3": {
+    "name": "Flintec RC3 Load Cell",
+    "description": "The Flintec RC3 compression load cell provides reliable weight measurement for industrial applications.",
+    "features": [
+      "Compression load cell technology",
+      "Reliable weight measurement",
+      "High manufacturing quality",
+      "Advanced industrial performance",
+      "Precise sensing",
+      "Durable design"
+    ],
+    "specifications": {
+      "type": "Compression Load Cell",
+      "model": "RC3",
+      "technology": "Advanced pressure sensing"
+    },
+    "applications": [
+      "Tank weighing systems",
+      "Industrial scales",
+      "Process weighing"
+    ],
+    "category": "Load Cells"
+  },
+  "flintec-ub6": {
+    "name": "Flintec UB6 Load Cell",
+    "description": "The Flintec UB6 load cell is designed for versatile industrial weighing applications.",
+    "features": [
+      "Versatile load cell design",
+      "Industrial weighing capability",
+      "High-precision measurement",
+      "Durable construction",
+      "Reliable performance",
+      "Professional quality"
+    ],
+    "specifications": {
+      "type": "Load Cell",
+      "model": "UB6",
+      "application": "Versatile industrial weighing"
+    },
+    "applications": [
+      "Industrial weighing systems",
+      "Multi-purpose applications",
+      "General weighing"
+    ],
+    "category": "Load Cells"
+  },
+  "flintec-slb": {
+    "name": "Flintec SLB Load Cell",
+    "description": "The Flintec SLB load cell is designed for specialized industrial weighing needs.",
+    "features": [
+      "Specialized load cell design",
+      "Designed for industrial needs",
+      "High-performance sensing",
+      "Excellent manufacturing quality",
+      "Accurate measurement",
+      "Professional applications"
+    ],
+    "specifications": {
+      "type": "Load Cell",
+      "model": "SLB",
+      "focus": "Specialized industrial requirements"
+    },
+    "applications": [
+      "Specialized weighing systems",
+      "Industrial applications",
+      "Professional weighing"
+    ],
+    "category": "Load Cells"
+  },
+  "flintec-sb14": {
+    "name": "Flintec SB14 Load Cell",
+    "description": "The Flintec SB14 load cell is designed for standard industrial weighing applications.",
+    "features": [
+      "Standard load cell design",
+      "Ready for industrial use",
+      "Reliable sensing technology",
+      "Cost-effective solution",
+      "Proven performance",
+      "High manufacturing quality"
+    ],
+    "specifications": {
+      "type": "Load Cell",
+      "model": "SB14",
+      "category": "Standard industrial"
+    },
+    "applications": [
+      "Standard weighing systems",
+      "Industrial processes",
+      "General applications"
+    ],
+    "category": "Load Cells"
+  },
+  "utilcell-740": {
+    "name": "Utilcell 740 Load Cell",
+    "description": "The Utilcell 740 load cell provides accurate weighing in industrial environments.",
+    "features": [
+      "High-precision weighing capability",
+      "Ready for industrial environments",
+      "High manufacturing quality",
+      "Accurate measurement",
+      "Reliable performance",
+      "Professional grade"
+    ],
+    "specifications": {
+      "type": "Load Cell",
+      "model": "740",
+      "environment": "High-precision industrial weighing"
+    },
+    "applications": [
+      "Precision weighing systems",
+      "Industrial applications",
+      "High-accuracy requirements"
+    ],
+    "category": "Load Cells"
+  }
     }
   }
 

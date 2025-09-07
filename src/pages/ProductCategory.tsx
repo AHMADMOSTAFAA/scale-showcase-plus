@@ -17,17 +17,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { productCategories } from "@/data/products"; // contains ids & image paths only
+import { productCategories } from "@/data/products";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const ProductCategory = () => {
-  const { t } = useTranslation();
   const { categoryId } = useParams<{ categoryId: string }>();
   const category = productCategories.find((c) => c.id === (categoryId || ""));
   const [query, setQuery] = useState("");
   const [brandFilter, setBrandFilter] = useState("all");
   const [catFilter, setCatFilter] = useState("all");
+  const { t } = useTranslation();
 
   if (!category) {
     return (
@@ -37,7 +37,7 @@ const ProductCategory = () => {
           <h1 className="text-5xl font-extrabold mb-4 text-red-600">
             {t("products.notFound.title")}
           </h1>
-          <p className="text-muted-foreground mb-8 text-lg">
+          <p className="text-lg text-muted-foreground mb-8">
             {t("products.notFound.subtitle")}
           </p>
           <Button asChild className="px-6 py-2 text-lg rounded-full">
@@ -48,21 +48,39 @@ const ProductCategory = () => {
     );
   }
 
-  const uniqueBrands = Array.from(new Set(category.products.map((p) => p.brand)));
-  const uniqueCategories = Array.from(new Set(category.products.map((p) => p.category)));
+  const uniqueBrands = Array.from(
+    new Set(
+      category.products.map((p) =>
+        t(`products.items.${p.id}.brand`, { defaultValue: p.brand })
+      )
+    )
+  );
+  const uniqueCategories = Array.from(
+    new Set(
+      category.products.map((p) =>
+        t(`products.items.${p.id}.category`, { defaultValue: p.category })
+      )
+    )
+  );
 
   const filteredProducts = category.products.filter((product) => {
     const q = query.toLowerCase();
-    const name = t(`products.items.${product.id}.name`).toLowerCase();
-    const desc = t(`products.items.${product.id}.description`).toLowerCase();
-    const brand = product.brand.toLowerCase();
-    const cat = product.category.toLowerCase();
+    const name = t(`products.items.${product.id}.name`, {
+      defaultValue: product.name,
+    }).toLowerCase();
+  const brand = t(`products.items.${product.id}.brand`, {
+  defaultValue: product.brand,
+}).toLowerCase();
+
+const cat = t(`products.items.${product.id}.category`, {
+  defaultValue: product.category,
+}).toLowerCase();
 
     const matchesSearch =
-      name.includes(q) || desc.includes(q) || brand.includes(q) || cat.includes(q);
+      name.includes(q) || brand.includes(q) || cat.includes(q);
 
-    const matchesBrand = brandFilter === "all" || product.brand === brandFilter;
-    const matchesCat = catFilter === "all" || product.category === catFilter;
+    const matchesBrand = brandFilter === "all" || brand === brandFilter;
+    const matchesCat = catFilter === "all" || cat === catFilter;
 
     return matchesSearch && matchesBrand && matchesCat;
   });
@@ -71,12 +89,12 @@ const ProductCategory = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <main className="container mx-auto px-4 py-10">
-        {/* Category Header */}
+        {/* Header Section */}
         <section className="text-center mb-12">
           <div className="mb-6 flex justify-center">
             <img
               src={category.img}
-              alt={t(`products.categories.${category.id}`)}
+              alt={t(`products.categories.${category.id}.name`)}
               className="h-44 object-contain drop-shadow-md"
             />
           </div>
@@ -88,7 +106,7 @@ const ProductCategory = () => {
           </p>
         </section>
 
-        {/* 🔍 Filters */}
+        {/* Filters */}
         <div className="flex flex-col md:flex-row gap-4 justify-center mb-12 bg-card p-4 rounded-xl shadow-sm border">
           <Input
             type="text"
@@ -127,7 +145,7 @@ const ProductCategory = () => {
           </Select>
         </div>
 
-        {/* Product grid */}
+        {/* Product Grid */}
         <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product) => (
@@ -141,14 +159,20 @@ const ProductCategory = () => {
                       {product.brand}
                     </Badge>
                     <span className="text-xs uppercase tracking-wide text-muted-foreground">
-                      {t(`products.items.${product.id}.category`)}
+                      {t(`products.items.${product.id}.category`, {
+                        defaultValue: product.category,
+                      })}
                     </span>
                   </div>
                   <CardTitle className="text-xl font-bold line-clamp-1">
-                    {t(`products.items.${product.id}.name`)}
+                    {t(`products.items.${product.id}.name`, {
+                      defaultValue: product.name,
+                    })}
                   </CardTitle>
                   <CardDescription className="text-sm line-clamp-2">
-                    {t(`products.items.${product.id}.description`)}
+                    {t(`products.items.${product.id}.description`, {
+                      defaultValue: product.description,
+                    })}
                   </CardDescription>
                 </CardHeader>
 
@@ -157,7 +181,9 @@ const ProductCategory = () => {
                     <div className="h-48 bg-muted rounded-lg overflow-hidden flex items-center justify-center shadow-inner mb-4">
                       <img
                         src={product.image}
-                        alt={t(`products.items.${product.id}.name`)}
+                        alt={t(`products.items.${product.id}.name`, {
+                          defaultValue: product.name,
+                        })}
                         className="object-contain max-h-full"
                       />
                     </div>
@@ -166,9 +192,11 @@ const ProductCategory = () => {
                       {t("products.keyFeatures")}
                     </h4>
                     <ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
-                      {[0, 1, 2].map((i) => (
-                        <li key={i} className="line-clamp-1">
-                          {t(`products.items.${product.id}.features.${i}`)}
+                      {product.features.slice(0, 3).map((feature, index) => (
+                        <li key={index} className="line-clamp-1">
+                          {t(`products.items.${product.id}.features.${index}`, {
+                            defaultValue: feature,
+                          })}
                         </li>
                       ))}
                     </ul>

@@ -92,7 +92,7 @@ export const productCategories: ProductCategory[] = [
         hasDetails: true,
         externalUrl:
           "https://cardinalscale.com/product/product-overview/Truck-Scales/SWIM-Slow-Speed-In-Motion-Scales",
-        attachmentUrl: "/attachments/AramexCoverLetter.pdf",
+        attachmentUrl: "",
       },
       {
         id: "cardinal-armor",
@@ -347,7 +347,7 @@ export const productCategories: ProductCategory[] = [
         hasDetails: true,
         externalUrl:
           "https://www.baykon.com/en/product/bx66-weighing-terminal/",
-           attachmentUrl: "",
+           attachmentUrl: "/attachments/bx66.pdf",
       },
       {
         id: "baykon-bx30-fill",

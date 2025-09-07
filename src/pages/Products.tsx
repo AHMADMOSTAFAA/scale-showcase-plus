@@ -27,12 +27,15 @@ const Products = () => {
 
   // 🔍 Filtering logic
   const filteredCategories = productCategories.filter((category) => {
-    const q = query.toLowerCase();
-    const matchesQuery =
-      category.name.toLowerCase().includes(q) ||
-      category.description.toLowerCase().includes(q);
+  const q = query.trim().toLowerCase();
 
-    const matchesFilter = filter === "all" || category.id === filter;
+  // Use translated strings for search
+  const name = t(`productsCategory.categories.${category.id}.name`).toLowerCase();
+  const description = t(`productsCategory.categories.${category.id}.description`).toLowerCase();
+
+  const matchesQuery = q === "" || name.includes(q) || description.includes(q);
+  const matchesFilter = filter === "all" || category.id === filter;
+
 
     return matchesQuery && matchesFilter;
   });
